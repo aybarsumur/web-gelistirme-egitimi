@@ -15,24 +15,34 @@
             text-align: center;
         }
 
+        /* Pseudo Classes */
+        /* 
+        https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+        */
+
+        /* Ziyaret edilmeden önceki durum */
         a:link {
             color: red;
         }
 
+        /* Ziyaret edildikten sonraki durum */
         a:visited {
             color: green;
         }
 
+        /* Üzerine gelindiğinde */
         a:hover {
             color: #fff;
             background-color: yellow;
         }
 
+        /* Ziyaret edilmediği ama tıklama anında */
         a:active {
             color: #fff;
             background-color: violet;
         }
 
+        /* div etiketi hover olduğunda(üzerine geldiğimde) p şunu yapsın . Bunun çalışabilmesi için p etiketinin div in childı olması gerek */
         div:hover p {
             display: block;
         }
@@ -40,15 +50,17 @@
         p {
             display: none;
         }
+
+        
     </style>
 </head>
 <body>
-    
+
     <!-- Pseudo classes -->
 
-    <a href="borders1.html">Home</a>
-    <a href="box-model1.html">Products</a>
-    <a href="combinators1.html">About</a>
+    <a href="./13-borders.html">Home</a>
+    <a href="./10-box-model.html">Products</a>
+    <a href="./21-combinators.html">About</a>
 
     <br><br>
 
@@ -56,8 +68,6 @@
         Click here!
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi totam saepe quis similique aut porro officiis ad. Et tempora laboriosam a perspiciatis debitis vero ipsam delectus, voluptates harum nulla officia?</p>
     </div>
-
-    <!-- Pseudo elements  -->
 
 </body>
 </html>

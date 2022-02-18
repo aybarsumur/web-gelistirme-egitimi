@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+        https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+        bunları uygulamak için :: şekline iki tane iki nokte üstüste kullanmak gerekiyor
+        */
+
+        /* ilk satırı için*/
+        p::first-line {
+            font-weight: bold;
+            color: brown;
+            /* kelimeler arası boşluk */
+            word-spacing: 3px;
+            /* harfler arası boşluk */
+            letter-spacing: 1px;
+        }
+        
+        /* classı about olan p etiketlerinin ilk satırı. NOT: Eğer p den sonra boşluk olsaydı p etiketlerinin altında classı about olanları kastediyor olacaktım (kullanımda, id içinde # aynı kurala sahip) yani arada boşluk olması Descendant combinator anlamında*/
+        p.about::first-line {
+            color: green;
+        }
+        p::first-letter {
+            font-size: 48px;
+        }
+
+        /* seçildiğinde: mouse yada başka bir şekilde seçildiğinde. Aşağıda herhangi bir selector kullanmadım. Bu yüden tüm yazı için geçerli oldu h, p vs.*/
+        ::selection {
+            background-color: hotpink;
+        }
+
+        /* after ile sonrasına, before ile de öncesine eleman ekleyebilirim*/
+        p::after {
+            /* Farklı emojiler için => https://www.w3schools.com/charsets/ref_emoji.asp */
+            content: '\261D';
+            font-size: 35px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Pseudo elements  -->
+    <!-- 
+        Herhangi bir elementin bir paçasına müdehale ediyoruz
+     -->
+
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda in nihil animi, voluptate possimus amet nostrum similique! Itaque, ipsa. Dicta hic quasi inventore distinctio odio rem nihil atque impedit tenetur.
+    </p>
+
+    <p class="about">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, pariatur asperiores sunt odit error reiciendis corrupti deserunt explicabo exercitationem consectetur. Deserunt quasi harum magnam nihil consectetur dignissimos tempora sapiente maiores!
+    </p>
+
+
+</body>
+</html>

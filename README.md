@@ -1,13 +1,13 @@
-# Web Gelistirme Egitimi Ders Notlarım
+## Web Gelistirme Egitimi Ders Notlarım
 
-## [Index Sayfası](https://aybarsumur.github.io/web-gelistirme-egitimi/)
+### [Index Sayfası](https://aybarsumur.github.io/web-gelistirme-egitimi/)
 
 <!-- Görsel
 
 ![Ekran Resmi](img/javascript-odev3-asianKitchen.jpg) -->
 
-## About Project
-Bu repo, [Udemy](https://www.udemy.com/) de almış olduğum Sadık Turan'ın oluşturduğu [Komple Uygulamalı Web Geliştirme Eğitimi](https://www.udemy.com/course/komple-web-developer-kursu/) kapsamında oluşturduğum ders notlarım ve uygulamaları içermektedir.
+#### About Project
+Bu repo, [Udemy](https://www.udemy.com/)'de almış olduğum,Eğitimci Sadık E. Turan'ın [Komple Uygulamalı Web Geliştirme Eğitimi](https://www.udemy.com/course/komple-web-developer-kursu/) kapsamında oluşturduğum ders notlarımı ve uygulamaları içermektedir.
 
 Yukarıdaki Index Sayfası linkinde ders notları indexine ulaşabilirsiniz.
 
