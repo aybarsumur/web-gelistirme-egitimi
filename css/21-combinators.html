@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Combinators */
+        
+        /* Descendant :(Descendants:torunları) div altında tüm p elementlerini seç */
+        /* div p {
+            background-color: red;
+        } */
+
+
+        /* Child : div altındaki tüm değil sadece alt elemanlar. Yani alttaki örnekte section içindekiler bu kapsama girmez. */
+        /* div > p {
+            background-color: red;
+        } */
+
+
+        /* Adjacent Sibling(komşu kardeş) :Yan yana olan elemanları kardeş elemanlardır. aşağıdaki örnekte 2.3.paragraflar ve section yada en üstteki p ile div. ve onun altındaki p ler kardeştir. Seçimde ise bu div den sonra gelen ilk kardeş anlamı taşır. aşağıdaki örnekte 5.paragrafın backgroundu kırmızı olacaktır.*/
+        /* div + p {
+            background-color: red;
+        } */
+
+
+        /* General Sibling: Adjacent siblingden tek farkı işaret dilenden sonraki tüm kardeşleri kasteder. Yani örnekteki 5.paragraf ve peşinden gelenlerin tamamının bg kırmız olacak */
+        div ~ p {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Combinators -->
+
+    <!-- 1- Descendant Selector ( ) -->
+    <!-- 2- Child Selector (>) -->
+
+    <p>1.paragraf</p>
+    <div>
+        <p>2.paragraf</p>
+        <p>3.paragraf</p>
+        <section>
+            <p>4.paragraf</p>
+        </section>
+    </div>
+    <p>5.paragraf</p>
+    <p>6.paragraf</p>
+
+    <!-- 3- Adjacent Sibling Selector (+) -->
+    <!-- 4- General Sibling Selector (~) -->
+
+
+</body>
+</html>
