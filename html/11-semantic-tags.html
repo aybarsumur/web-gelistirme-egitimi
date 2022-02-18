@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    Semantik Öğeler Nelerdir?
+    Anlamsal bir öğe, anlamını hem tarayıcı hem de geliştirici için açık bir şekilde tanımlar.
+
+    Anlamsal olmayan öğelere örnekler : <div> ve <span> - İçeriği hakkında hiçbir şey söylemez.
+
+    Anlamsal öğe örnekleri : <form>, <table>, ve <article> - İçeriğini açıkça tanımlar.
+    
+    <article>
+    <aside>
+    <details>
+    <figcaption> : resim içeriğinin nerede çekildiğine dair açıklaması
+    <figure> : resim içerikleri için kullanılır
+    <footer>
+    <header>
+    <main>
+    <mark>
+    <nav>
+    <section>
+    <summary>
+    <time>
+    -->
+
+    <!-- header : Başlık -->
+    <header>
+        <img src="" alt="">
+        <nav>
+            <ul>
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">Kurslar</a></li>
+                <li><a href="#">Makaleler</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="content">   
+        <!-- aside : Sağ yada solda konumlandıracağımız ana içerikten daha az yer kaplayan içerik kısmı-->
+        <aside>
+            <h2>Kategoriler</h2>
+            <!-- nav : Navigation , yönlendirme bölgesi -->
+            <nav>
+                <h3>Html</h3>
+                <ul>
+                    <li><a href="#">Html Nedir?</a></li>
+                    <li><a href="#">Html Sayfa Tasarımı</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h3>Css</h3>
+                <ul>
+                    <!-- a : ancher -->
+                    <li><a href="#">Css Nedir?</a></li>
+                    <li><a href="#">Css Sayfa Tasarımı</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- main : Uygulamanın ana içeriği bölgesi -->
+        <main>
+            <h1>En çok okunanlar</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aspernatur deserunt porro qui molestias alias, tempora distinctio adipisci minus, quidem cumque debitis numquam corrupti a. Ut quam asperiores voluptate vero!</p>
+
+            <!-- section : bölüm anlamında/div den büyük bir farkı yok -->
+            <section id="all-articles">
+                <!-- article : yazıların olduğu makaleler gölümü -->
+                <article>
+                    <h2>Html Nedir?</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nulla quis fugiat omnis? Amet sunt aliquid esse numquam voluptate ab vel impedit. Placeat, hic eius quasi officia dolore sed fuga.</p>
+                    <p>
+                        <!-- time etiketi ile bunun bir zaman içeriği olduğu anlatıldı -->
+                        Sadık Turan tarafından <time datetime="2022-01-05 20.00"> 2025 Ocak </time> ayında yayınlandı.
+                    </p>
+                </article>
+                <article>
+                    <h2>Html Sayfa Tasarımı</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nulla quis fugiat omnis? Amet sunt aliquid esse numquam voluptate ab vel impedit. Placeat, hic eius quasi officia dolore sed fuga.</p>
+                    <p>
+                        Sadık Turan tarafından <time datetime="2025-01-05 20.00"> 2025 Ocak </time> ayında yayınlandı.
+                    </p>
+                </article>
+            </section>
+          
+        </main>
+    </section>
+
+    <!-- Alt kısım -->
+    <footer>
+        Tüm hakları saklıdır.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,686 @@
+***** Css - assets/css-reference.pdf *****
+
+**** Css Nedir ? ****
+Örneğin; h1 etiketi chrome tarayıcı için 32px olarak belirlenmiş ve her h1 etiketini kullandığımızda 32 px lik koyu bir yazı karşımıza çıkıyor. Ya da kullandığımız <p> etiketleri için üstten ve alttan biraz boşluk (margin) bırakılır. Ancak tarayıcıların html etiketleri için atadıkları bu başlangıç değerlerine (css özellikleri)  rağmen sitelerimiz soluk ve cansız bir şekilde karşımıza çıkmaktadır.
+
+Günümüz web sayfalarında görsellik daha da ön çıkmaktadır dolayısıyla her html etiketi için varsayılan görüntü biçimini değiştirebileceğimiz bir araca ihtiyacımız var. Bu araç yani kodlama dili Css (Cascading Style Sheet) 'dir.
+
+***Css söz dizimi***
+
+Css kodlarını yazma biçimine css söz dizimi denir. Söz dizimi 3 bölümden oluşur.
+
+Selector {
+ property : value;
+}
+
+1-) Selector : Seçici olarak adlandırılır ve html sayfasındaki her hangi bir html etiketini
+seçmek için kullanılır. Css kodunu etiket ile ilişkilendirmek için ilk olarak etiketi seçmemiz
+gerekir.
+2-) Property: Kullanacak olduğumuz css özellik tipidir.
+3-) Value : Css özelliğinin alacağı değeri temsil eder.
+
+p {
+ color:red;
+}
+
+* Sayfadaki tüm <p> etiketlerinin yazı rengini kırmızı yapar.
+* p: selector, color: property, red: value
+
+h1 {
+ font-size : 40px;
+ color:blue;
+}
+** Sayfadaki tüm <h1> etiketlerinin font büyüklüğünü 40px ve yazı
+rengini mavi yapar.
+
+
+
+*** Css Yazım Türleri ***
+
+Css kodlarımızı farklı amaçlara göre 3 farklı şekilde tanımlayabiliriz.
+• Inline Css
+• Internal
+• External Css
+
+
+
+*** Inline Css ***
+
+Sadece tanımlandığı etiket için geçerli olmasını istediğimiz css kodlarımızı inline css olarak
+tanımlarız.
+** Inline css kodları direk etiket içine yazılır ve sadece o etikete uygulanır.
+** Inline olarak yazılan css kodları aynı özellik için yazılmış diğer css kodunu ezer ve etkin
+olur.
+
+<span style="color:red;"> text </span>
+** <span> etiketi içindeki yazıları kırmızı yaparız.
+<a href="#" style="color:blue;text-decotation:none;">
+ tıklayınız.
+</a>
+** <a> etiketi için 2 tane css kodunu inline olarak yazdık.
+* text-decoration:none; demekle link yazısı altındaki alt çizgiyi
+kaldırdık.
+* color ile link yazısını mavi yaptık.
+
+
+
+*** Internal Css ***
+
+Internal css <head> </head> etiketleri arasına <style type="text/css"> </style> etiketleri
+eklenerek kullanılır.
+** Internal olarak tanımlanan css kodları sadece bulunduğu html sayfasını ilgilendirir.
+
+<head>
+ <style type="text/css">
+
+ h1{
+ font-size :32px;
+ color :blue;
+ }
+ </style>
+</head>
+
+* index.html içindeki h1 etiketi için yazılan css kodu sadece
+index.html sayfasındaki h1 etiketini ilgilendirir. about.html sayfası
+içindeki h1 etiketine de aynı css kodunu eklememiz gerekiyorsa aynı
+işlemi about.html sayfasında da tekrarlamamız gerekir.
+
+
+
+*** External Css ***
+
+Eğer tanımladığımız css kodları birden fazla html sayfasını ilgilendiriyor ise bu durumda .css
+uzantılı bir dosya oluşturup bu dosya içerisine css kodlarımızı tanımlamamız gerekir.
+* Harici .css uzantılı dosyaya yazdığımız css kodlarını hangi html sayfasına eklemek
+istiyorsak o html sayfası ile css dosyasını bir birine <link> ile bağlamamız gerekiyor.
+
+<head>
+ <link rel=”stylesheet” href=”style.css”>
+</head>
+
+style.css dosyasına aşağıdaki css kodlarını ekleyelim.
+h1 {
+ font-size :32px;
+ color :blue;
+}
+p {
+ color : red;
+ font-size: 16px;
+}
+
+
+
+*** Tagname selector ***
+
+Etiket ismine göre yaptığımız seçim işlemidir. 
+
+p {
+ color:blue;
+}
+* sayfadaki tüm <p> etiketleri seçilir.
+
+
+
+*** id selector ***
+
+Etiketlere verdiğimiz benzersiz isme id denir.
+* Bir html dökümanında aynı id ismiyle sadece bir etiket olmalıdır.
+* id ile seçim yaparken # işareti kullanılır.
+
+<h1 id=”header”> sayfa başlığı </h1>
+
+#header {
+ font-size:40px;
+}
+* header id’sine sahip sadece bir etiket olmalıdır.
+
+
+
+*** class selector ***
+
+Class ismine göre yaptığımız seçme işlemidir.
+* bir class ismi bir html dökümanında istenildiği kadar kullanılabilir.
+* class ile seçme işleminde “.” (nokta) işareti kullanılır.
+* bir etikete birden fazla class verilebilir.
+
+<ul>
+ <li class="active"> item 1 </li>
+ <li> item 2 </li>
+ <li class="active"> item 3 </li>
+</ul>
+<div class="active f30">
+ arka plan yeşil olur.
+</div>
+
+.active {
+ background-color : green;
+}
+.f30{
+ font-size:30px;
+}
+* active class’ ına sahip tüm elemanların zemin rengi yeşil olur.
+
+
+
+*** Group selector ***
+
+Css Group Selector' larını bir kapsam içinde aradığımız etiketler için kullanıyoruz.
+Örneğin farklı seviyelerde olan bir <p> etiketleri için kullanabiliriz.
+Başlıca group selector kullanımları;
+ 1 : (*) => tüm etiketler
+ 2 : (p) => tüm p etiketleri
+ 3 : (div p) => div içindeki tüm p etiketleri
+ 4 : (div,p) => tüm div ve tüm p etiketleri
+ 5 : (div > p) => üst etiketi div olan tüm p etiketleri
+ 6 : (p ~ div)=> p ile aynı seviyede tüm div etiketleri
+ 7 : (p + div)=> p etiketinden sonra gelen aynı seviyedeki div etiketi
+
+<div>
+ <p id="first"> </p>
+ <p class="description"> </p>
+</div>
+
+<p> </p>
+
+div p {
+ /* div altındaki tüm p etiketleri */
+}
+
+div #first{
+ /* div altında id' si first olan eleman */
+}
+
+div .description{
+ /* div altında class' ı description olan eleman */
+
+
+
+*** Pseudo Class Selector ***
+
+html etiketlerinin durumunu kontrol ettikten sonra uygulayacağımız css kodları için
+kullanılır.
+* css kodları bir etiketin tamamı için kullanılır.
+
+selector:pseudo-class {
+ property:value;
+}
+
+a:link { } => linkin normal durumu
+a:visited { } => ziyaret edilmiş link
+a:hover { } => linkin üzerine geldiğimiz an
+a:active { } => linke tıkladığımız an
+div:hover { } => div üzerine geldiğimiz an
+
+
+
+*** Pseudo Element Selector ***
+
+bir etiketinin her hangi bir parçasını seçmek istediğimizde kullanırız.
+Pseudo class selector' larından farklı olarak "::" sembolü kullanılır.
+
+selector::pseudo-element {
+ property:value;
+}
+
+p::first-line {
+
+}
+* <p> etiketinin kapsamındaki yazı içinde ilk satırı seçmek
+istediğimizde kullanırız. Bir kapsamın içindeki bir parçayı seçtiğimize
+dikkat ediniz.
+
+p::first-letter {
+}
+* <p> etiketi içindeki yazının ilk harfini seçer.
+
+
+
+*** font-size ***
+
+Yazı boyutu için kullanılır. 
+
+h1{
+ font-size:50px;
+}
+
+
+
+*** font-family ***
+
+Font türü için kullanılır. 
+
+p {
+ font-family: "Times New Roman", Times, serif;
+}
+
+
+
+*** font-weight ***
+
+Yazı kalınlığını temsil eder. Alabileceği değerler : normal, bold, bolder 
+
+p {
+ font-weight:bold;
+}
+
+
+
+*** color ***
+
+Yazı rengi için kullanılır.
+* yazı rengi için önceden tanımlanmış renk isimlerini kullanabiliriz.
+* RGB (Red,green,blue) 3 ana temel renk için 0-255 arasında değer alır.
+* Hexedecimal renk tanımlaması yapılabilir. #ffffff ya da # 00000.
+
+p {
+ color:white;
+}
+
+p {
+ color:rgb(255,255,255);
+}
+
+p {
+ color: ffffff;
+}
+
+
+
+*** background-color ***
+
+Arka zemin rengi için kullanılır. 
+
+div {
+ background-color : blue;
+}
+
+
+
+*** width ***
+
+genişlik için kullanılır.
+* block ve inline-block elemanlar için width kullanılır, inline etiketlere genişlik ve
+yükseklik verilmez.
+
+#container {
+ width: 600px;
+}
+
+
+
+*** height ***
+
+yükseklik için kullanılır.
+* block ve inline-block elemanlar için width kullanılır, inline etiketlere genişlik ve
+yükseklik verilmez.
+
+#container {
+ height: 200px;
+}
+
+
+
+
+*** max-width / max-height ***
+
+Bir nesnenin alabileceği maksimum genişlik ya da maksimum yükseklik değeri için kullanılır. 
+
+div {
+ max-width: 600px;
+ max-height: 200px;
+}
+
+
+
+*** float ***
+
+Nesneleri hizalamak için kullanılır. Genelde <div> ’leri yan yana getirmek için kullanırız.
+Alabileceği değerler ;
+Left => sola hizalanır.
+right => sağa hizalanır
+none => hizalama işlemi yapılmaz.
+
+<div id="first" class="box"></div>
+<div id="second" class="box"></div>
+<div id="third" class="box"></div>
+
+.box {
+ width: 150px;
+ height: 150px;
+ margin: 2px;
+}
+
+#first {
+ background: red;
+ float:left;
+}
+
+#second {
+ background: blue;
+ float:left;
+}
+
+#third {
+ background: green;
+ float:left;
+}
+* Örneğimizde 3 div etiketini yan yana getiriyoruz.
+
+
+
+*** display:inline; ***
+
+inline etikete çevirmek için kullanırız.
+Örneğin div etiketi block etiketi iken display: inline; kullanımı ile div etiketini inline
+etiketine çevirebiliriz.
+* Inline etiketlere genişlik ve yükseklik veremeyiz. (width,height).
+* Inline etiketlere genişlik ve yükseklik veremediğimizden dolayı background-color sadece
+yazının arkasını çevreler.
+* Inline etiketlere sadece sağ ve soldan margin ya da padding değerleri verebiliriz.
+
+li {
+ display:inline;
+}
+
+
+
+*** display : block ***
+
+Inline etiketleri block etiketlerine çevirebiliriz.
+* block etiketlere genişlik vermediğimizde satırı olduğu gibi kaplar ve bir sonraki nesne bir
+sonraki satırdan devam eder.
+* block etiketler için yükseklik ve genişlik değeri verebiliriz. Dolayısıyla aynı satırda bir den
+fazla block elemanı yan yana getirebilmek için bir genişlik kullanmalıyız.
+* block elemanları örneğin <div> etiketlerini yan yana getirmek için float ve width
+kullanmalıyız.
+
+a {
+ display:block;
+}
+
+
+
+*** display : inlineblock; ***
+
+display:inline-block olan bir nesne hem inline gibi satırda yan yana gelir hem de bu
+nesnelere block nesneler gibi yükseklik ve genişlik değerleri verebiliriz.
+
+li {
+ display:inline-block;
+ width: 200px;
+}
+* li etiketi için sabit bir genişlik vererek her elemanın yan yana
+gelmesini sağlayabiliriz. Float kullanmadığımıza dikkat ediniz.
+
+
+
+*** display:none; ***
+
+uygulamadığımız nesne ekranda görünmez. Html dökümanı içinde yer kaplamaz. 
+Dolayısıyla bir sonraki nesne görünmez olan nesnenin yerini alır.
+visibility: hidden; ise gene görünmez hale gelir ancak nesnenin yeri diğer nesne ile
+doldurulmaz. Varmış gibi yer kaplamaya devam eder.
+
+visibility: none | visible | hidden | collapse;
+
+div {
+ display:none;
+}
+
+div {
+ visibility:hidden;
+}
+
+
+
+*** Position ***
+
+Web sayfalarında nesnelerin konumlarını ve davranış biçimlerini float ve display özellikleriyle değiştirebiliriz.
+Bu amaç için bir diğer özelliğimiz ise position özelliğidir.
+Alabileceği değerler :
+Position : static | relative | fixed | absolute | sticky
+
+
+
+
+*** Position:static; ***
+Html etiketleri başlangıç ayarı yani varsayılan olarak static biçimde davranış gösterirler.
+Yani normal akış içinde birbirlerinden etkilenerek davranış gösterirler. * Static nesneler
+için top, right, bottom ve left konumlandırma özellikleri kullanılamaz.
+
+
+
+*** Position:relative; ***
+Bir nesneye position:relative; dediğimizde nesne gene normal akış içerisinde olmaya
+devam eder ancak top, right, bottom ve left özelliklerini kullanma fırsatı verir.
+* relative olan nesne o anki konumu neredeyse oradan itibaren konumlandırma yapar.
+
+<div class="box"></div>
+
+.box{
+ width: 150px;
+ height: 150px;
+ background: blue;
+ position:relative;
+ top:50px;
+}
+* 150x150 boyutlarındaki mavi kutu sayfanın sol üst köşesinden 50px aşağıya iner.
+
+
+
+*** Position:absolute; ***
+
+Bir nesnenin position özelliğini absolute yaptığımızda o nesne normal akış içinden çıkar
+ayrıca 4 köşeden konumlandırma yapmamızı sağlar. Relative ile Absolute nesnelerin farkı
+normal akış içinde olup olmadığı farkıdır.
+* absolute olan nesne kendinden önce gelen nesnelerin kapladığı yer ile ilgilenmeden
+sayfanın sol üst köşesinden itibaren konumlandırma yapar.
+
+
+
+*** Position:fixed; ***
+
+Bir nesneyi yatay ve dikey kaydırma çubuklarından etkilenmeden sabir bir yerde konumlandırmak için kullanırız. 
+Örneğin sayfanın sağ alt köşesinde bulunan canlı sohbet menüsü gibi.
+
+div {
+ position: fixed;
+ bottom: 0;
+ right: 0;
+ width: 250px;
+ border: 4px solid red;
+}
+
+
+
+*** Position:sticky; ***
+Kaydırma çubuklarını takip eder ve istenilen pozisyon yakalandığında nesneyi o noktada sabitler. 
+Örneğin bir nesne için yukarıdan 0 konumuna geldiğimiz anda nesnenin sabitlenmesini isteyebiliriz. 
+Genelde menüler için sticky postion kullanılır.
+
+div {
+ position: sticky;
+ top: 0;
+ width: 250px;
+ border: 4px solid red;
+}
+
+
+
+*** Box Model ***
+Css Box Model yani css kutu model, html'de bulunan her bir nesnenin etrafında olan bir kutuyu temsil eder.
+Bu kutu modeli nesnelerin birbiri ile arasındaki mesafe (margin), kutu ile içerik arasındaki
+mesafe (padding) ve kutunun etrafındaki kenarlık (border) ile ilgili çalışmaları temsil eder.
+
+
+
+*** Margin ***
+Css Margin, html nesnelerinin birbiri ile olan mesafelerini belirtir.
+* margin : top right bottom left; => şeklinde 4 köşeden margin değerlerini tek tek
+belirleyebiliriz.
+* margin : top-bottom right-left; => iki değer şeklinde bir kullanım yapabiliriz.
+* margin : top-right-bottom-left; => şeklinde 4 köşe için tek bir değer kullanımı da yapabiliriz.
+
+div {
+ margin:10px 20px;
+}
+* üst-alt için 10px ve sağ-sol için ise 20px' lik bir boşluk bırakmış oluruz.
+
+div {
+ margin:10px;
+}
+* 4 köşe için 10px margin değeri vermiş oluruz
+
+
+
+*** Padding ***
+Css padding ile nesnelerin etrafında bulunan kenarlık ile arasındaki mesafeyi ayarlayabiliyoruz.
+* margin’ de olduğu gibi 4 köşeden padding kullanımı yapabiliriz.
+
+.box{
+ width:250px;
+ background-color:red;
+ padding:20px;
+}
+
+
+
+*** Border ***
+Css border html nesnelerinin etrafına kenarlık eklemek için kullanılır.
+* Border' a verebileceğimiz 3 özellik vardır. Bunlar border-style, border-width ve border-color özellikleridir.
+* border-top, border-right, border-bottom, border-left şeklinde 4 köşeden ayrı ayrı kenarlık ekleyebiliriz.
+
+div {
+ border:1px solid red;
+}
+* 1px çizgi kalınlığı, solid çizgi tipi ve kırmızı çizgi rengi kutunun etrafına eklenir.
+
+
+
+
+*** Box Sizing ***
+Bir nesnenin kapladığı alan nesnenin genişliği + padding + border değerlerinin toplamıdır.
+Ancak box-sizing:box-box dediğimizde bu hesaba padding ve border katılmayacaktır.
+Nesnenin kapladığı toplam alan width ya da height ile belirlenecektir.
+
+* {
+ box-sizing: border-box;
+}
+-tüm etiketler için border-box özelliğini aktif ediyoruz.
+
+
+
+
+*** textdecoration:none; ***
+Alt çizgiyi kaldırır.
+
+* Alabileceği diğer değerler.
+text-decoration:underline; => altını çizer
+text-decoration:overline; => üstünü çizer
+text-decoration:line-through; => ortasını çizer
+
+a {
+ text-decoration:none;
+}
+* <a> etiketinin varsayılan özelliği olan alt çizgiyi kaldırır.
+
+
+
+
+*** Text Transform ***
+text-transform: uppercase; => büyük harfe çevirir
+text-transform: lowercase; => küçük harfe çevirir
+text-transform: capitalize; => her kelimenin baş harfini büyük harfe çevirir.
+
+.uppercase {
+ text-transform: uppercase;
+}
+
+.lowercase {
+ text-transform: lowercase;
+}
+
+.capitalize {
+ text-transform: capitalize;
+}
+
+
+
+
+*** Text Indentation ***
+Paragrafın ilk cümlesinin ne kadar içeriden başlayacağını belirtir. 
+
+p {
+ text-indent: 50px;
+}
+* paragraf 50px içeriden başlat.
+
+
+
+*** Letter Spacing ***
+Harf aralıklarını belirler. 
+p {
+ letter-spacing:1.2px;
+}
+* her harf arasındaki mesafe.
+
+
+
+
+*** Line Height ***
+Satır yüksekliğini belirtir. 
+
+.small {
+ line-height: 0.7;
+}
+
+.big {
+ line-height: 1.8;
+}
+
+
+
+
+*** Word Spacing ***
+Kelimeler arasındaki boşluk. 
+
+h1 {
+ word-spacing: 5px;
+}
+
+h2 {
+ word-spacing: -5px;
+}
+* negatif değer ile kelimeler birbirine çok yaklaşır.
+
+
+
+
+*** Text Align ****
+text-align => bir block eleman içindeki yazıların ya da içeriklerin hizalanmasını sağlar.
+text-align : left | center | right | justify;
+* hizalama işlemi block etiketlere uygulanır. Eğer inline bir etiketleri için text-align özelliği işlevsel değildir. 
+Eğer ki inline etiket grubunu hizalamak istersek bu durumda inline etiket grubunu bir block etiketi (<div>,<p>) içine alıp hizalama işlemini yapabiliriz.
+
+<p>
+ Komple Uygulamalı Web Geliştirme
+</p>
+
+p {
+ text-align:center;
+}
+
+
+
+
+*** icon ***
+İcon kullanımı için font-awesome sitesini ziyaret edelim. Site için tıklayınız.
+* How-to-use linkinden icon kütüphanesini sayfamızın <head> kısmına kopyalayalım.
+* Icons menüsünden ise kullanmak istediğimiz iconun <i> etiketini alalım.
+
+<i class="fas fa-allergies"></i>
+Örnek bir icon kullanımı.
+
+
+
+**** Kaynak : Sadık Turan/Komple Uygulamalı Web Geliştirme Eğitimi - https://sadikturan.com/css-3/css-nedir/1143

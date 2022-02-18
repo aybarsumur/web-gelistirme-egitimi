@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- html safyası içine başka bir html sayfası eklemek istediğimizde iframe (çerçeve) kullanıyoruz. Bunun genişliği yüksekliğini ayarlayabiliriz. Buna title bilgisi verebiliriz. Aynı sayfada birden fazla iframe de kullanabiliriz. frameborder ile çerçeve verilir. -->
+    <iframe src="/html/uygulamalar/07-kayıt-ol-forms/kayit-ol.html"
+        name="myframe" 
+        frameborder="1" 
+        width="500" 
+        height="400" 
+        title="üyelik formu"></iframe>
+
+    <p>
+        <!-- burada linke target vererek, linkin nerede açılmasını istediğimi söyledim. Bu örnekte hedef yukarıda yaptığım iframe için. Bunun için yukarıdaki iframe bir isim verdim ve onu işaret ettim -->
+        <a href="https://sadikturan.com" target="myframe">linke git</a>
+    </p>
+
+    <div>
+        <!-- youtube videosunu iframe içinde gösterme. Youtubeda videoya paylaş dediğin zaman yerleştiri seçerek ekleyebilirsin. iframe de inline bir elemandır-->
+        <iframe src="https://www.youtube.com/embed/4ZDRBpJPzdU"
+        width="560" 
+        height="315"
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div>
+
+    
+
+</body>
+</html>

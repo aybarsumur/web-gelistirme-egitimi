@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+    <style>
+        /* sayfadaki tüm etiketlerdeki margini 0 yaptım */
+        * {margin: 0;}
+        #showcase { 
+            background-color: #2E4C6D; 
+            /* margin: 20px 10px 30px 50px; */
+            /* margin: 50px 30px; */
+            margin: 50px 30px 20px;
+        }
+        #how-it-works { 
+            background-color: #FC997C;
+            /* margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px; */
+            margin: 50px auto;
+            width: 500px;
+            /* Burada auto yu tekbaşına kullanmayız.Çünkü section bir block element. satırı tamamen kaplıyor. Bundan dolayı auto kullanabilmek için width değeri vermeliyiz böylelikle de elemanı ortalamış oluruz.*/
+        }
+
+        /* Margin  Collapsing : Diyelim ki yukarıdaki gibi iki nesnemiz var. Üsttekinin margin bottomı 25px, alttakinin margin top'ı 20px. bu durumda incelendiği taktirde iki nesne aradaki boluğun 25px olduğu görülür. büyük olan margin küçüğü ezer. ve yine nesne bazlı incelendiğinde alttakinin üzerine gelinince 20px lik bir bölümün taralı olduğu kalan 5px lik bölümün boşluk gözüktüğü anlaşılır. Bu çakışmaya collapsing denir.*/
+
+        /* ÖNEMLİ */
+        /* inline elemanlarda padding top ve bottom değerleri ile elemanı aşağı yukarı hareket ettiremezsin. */
+      
+    </style>
+</head>
+<body>
+
+    <!-- margin -->
+    <!-- padding -->
+    <!-- border -->
+
+   <main>
+       <section id="showcase">
+           <h1>Welcome to MovieApp</h1>
+       </section>
+       <section id="how-it-works">
+           <h2>How it works?</h2>
+       </section>
+   </main>
+
+</body>
+</html>

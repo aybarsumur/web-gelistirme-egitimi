@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- attributelar artık kullanılmadığı için (deprecated) kırmızı çıkıyor ama çalışıyor -->
+    <table border="1px" width="70%" cellpadding="10px" cellspacing="10px">
+        <!-- thead : tablonun başlıklar satırı -->
+        <thead>
+            <!-- table row : satır -->
+            <tr>
+                <!-- table head : tablo başlık -->
+                <th>id</th>
+                <th>ürün ismi</th>
+                <th>fiyat</th>
+                <th>resim</th>
+            </tr>
+        </thead>
+        <!-- tbody : tablonun içerik bölümü -->
+        <tbody>
+            <tr>
+                <!-- table data : tablo içeriği -->
+                <td>1</td>
+                <td>iphone 11</td>
+                <td>7000</td>
+                <td>1.jpeg</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <!-- rowspan : satır birleştir -->
+                <td rowspan="2">iphone 12</td>
+                <td>8000</td>
+                <td>2.jpeg</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <!-- colspan : kolon birleştir -->
+                <td colspan="2">8000 - 3.jpeg</td>
+            </tr>
+        </tbody>
+        
+    </table>
+
+
+
+
+</body>
+</html>

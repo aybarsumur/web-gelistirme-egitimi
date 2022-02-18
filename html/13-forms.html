@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- Burada kullandığımız action'ı backend tarafında kullanılıyor.Form içinde oluşturan bilgi action içinde tanımlanan adrese gönderilir. Bu adres esasında bir dosyaya karşılık gelir ve dosya içince de bir server kodu oluşturuluyor. Submit ettiğimizde bilgiler bu dosyayaya gidiyor.-->
+
+    <!-- Bunların çok alternatifi var. w3s üzerinden farklı form elemanlarını araştır -->
+
+    <form action="register.php">
+
+        <div>
+            <!-- label daki for bilgisi inputtaki id ile ilişkilendiriliyor olması gerekir. Label ve input birer inline elemandır. Ondan dolayı div için de kullandık-->
+            <label for="name">Adınız</label>
+            <input type="text" id="name">
+        </div>
+        <div>
+            <label for="surname">Soyad</label>
+            <input type="text" id="surname">
+        </div>
+
+        <div>
+            <!-- password: otomatik görünmez*** olarak gelir  -->
+            <label for="parola">Parola</label>
+            <input type="password" id="parola">
+        </div>
+
+        <div>
+            <!-- birden fazla satır bilgi almak istiyorsan textarea kullanıyorsun. kolon ve satır bilgisi kullanabilirsin -->
+            <label for="intro">Kendini Anlat</label>
+            <textarea id="intro" cols="30"></textarea>
+        </div>
+        <div>
+            <!-- radio butonu: inputlarda aynı name bilgisini kullnadığında bunların aynı grubun elemanı olduğunu belirtmiş oluyorsun, böylelikle sadece bir tanesi seçilir olur. Input id ile label for aynı olduğu için text e tıkladığında da işaretleme yapabiliyorsun -->
+            <p>En sevdiğin programlama dili: </p>
+            <input type="radio" id="html" name="programlama">
+            <label for="html">HTML</label>
+
+            <input type="radio" id="css" name="programlama">
+            <label for="css">CSS</label>
+
+            <input type="radio" id="javascript" name="programlama">
+            <label for="javascript">Javascript</label>
+        </div>
+
+        <div>
+            <!-- Aşağıda görüldüğü gibi sayfada aynı id den for ile ilişkilendirilmiş bir tane olması lazım ki yoksa bunu işaretlediğinde yukarıda aynı idli olan da işaretlenir. Checkbox doğası gereği birden çok seçilebilir.Name ile ilişkili değil  -->
+            <p>En sevdiğin programlama dili: </p>
+            <input type="checkbox" id="html2">
+            <label for="html2">HTML</label>
+
+            <input type="checkbox" id="css2">
+            <label for="css2">CSS</label>
+
+            <input type="checkbox" id="javascript2">
+            <label for="javascript2">Javascript</label>
+        </div>
+
+        <div>
+            <!-- select : seçim kutusu -->
+            <label for="cities">Şehir</label>
+            <select id="cities">
+                <!-- kullanıcı kocaelini seçiyor ama biz programlamada vermiş olduğumuz value olan 41 olarak kullanıyoruz -->
+                <option value="41">Kocaeli</option>
+                <option value="34">İstanbul</option>
+            </select>
+        </div>
+
+        <div>
+            <!-- email:validation'ı otomatik yapar -->
+            <label for="eposta">Email</label>
+            <input type="email" id="eposta">
+        </div>
+
+        <div>
+            <!-- date: takvim çıkar-->
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday">
+        </div>
+
+        <!-- formu onaylar ve yollar -->
+        <button type="submit">Kaydet</button>
+        <!-- formu temizler -->
+        <button type="reset">Temizle</button>
+
+    </form>
+
+
+</body>
+</html>

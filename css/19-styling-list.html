@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+    <style>
+      
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #showcase { 
+            background-color: #2E4C6D; 
+            height: 500px;
+            width: 100%;
+            padding: 10px;
+        }
+       
+        #how-it-works { 
+            background-color: #FC997C;
+            padding: 10px;
+        }
+
+        .main-header {
+            background-color: #FC997C;
+        }
+
+        .main-nav {
+            display: inline-block;
+            width: calc(100% - 74px);
+            text-align: right;
+        }
+        /* Burada main-nav classının altındaki items anlatmak için __ ifadesi kullanıyorum. Böylece benden başka bakan biri de bu kılasın birşeyi altı classı olduğunu anlayabilecek */
+        .main-nav__items {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* liste elemanları inline block olarak davransın diye */
+        .main-nav__item {
+            display: inline-block;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="#">MovieApp</a>
+        <nav class="main-nav">
+            <!-- Burada liste kullanmamızın en büyük avantajı ileride farklı çözünürlüklerde çalışırken özellikle küçük ekran boyutlarında artık alt alta gelmelerini sağlamanın daha basit olması ve js tarafında daha hızlı ve stabil işlem yapılabilmesi -->
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="#">Home</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#">Movies</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>    
+
+   <main>
+       <section id="showcase">
+           <h1>Welcome to MovieApp</h1>
+       </section>
+       <section id="how-it-works">
+           <h2>How it works?</h2>
+       </section>
+   </main>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+    <style>
+      
+        * {
+            box-sizing: border-box;
+        }
+
+        /* tüm ekran her taraftan sınırlara dayanmış oldu */
+        body {
+            margin: 0;
+        }
+
+        #showcase { 
+            background-color: #2E4C6D; 
+            height: 500px;
+            width: 100%;
+            padding: 10px;
+        }
+       
+        #how-it-works { 
+            background-color: #FC997C;
+            padding: 10px;
+        }
+
+        .main-header {
+            background-color: #FC997C;
+        }
+
+        .main-nav {
+            /* 
+            bu css kodları yazılmadan a ( inline eleman ) üstte, nav ise bir block eleman oldğu için a nın hemen altında konumlanmıştı. Fakat ben bunları aynı hizzada ve birini en solda diğerini ise en sağda istiyorum. Bunun için öcelikle;
+            1- display: inline-block diyerek nav elemanını bir inline eleman haline getiriyoruz.
+            2- text-align: right ; bu kodu block bir elemanda yani satırı komple kaplayan bir elemanda kullanırsak etki ettiğini hemen görürüz. fakat bizim navımı artık bir inline eleman yani içindeki elemanlar kadar yer kaplıyor. Ondan ötürü şu an için bu kod işe yaramıyor.
+            3- Yukarıdaki text-align ın işe yarayabilmesi için satırda nav elemanın, soldaki a elemanından arta kalan tüm yeri kapladığını anlatmamız gerek. Bunun için de width hesaplama bir formülümüz var .
+            width: calc(100% - 74px);(arada bırakılan boşluk önemli) burada genişliğin %100 kısımdan a elemanının kapladığı sabit genişlik 74px lik kısımı çıkart(bu değeri biraz deneme yanılma ile buluyoruz- Tabi a etiketi üzerine geldiğimizde genişlik değerini görebiliyoruz) ve gerisi benim genişliğim diyoruz.
+            */
+            display: inline-block;
+            width: calc(100% - 74px);
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="#">MovieApp</a>
+        <nav class="main-nav">
+            <a href="#">Home</a>
+            <a href="#">Movies</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+   <main>
+       <section id="showcase">
+           <h1>Welcome to MovieApp</h1>
+       </section>
+       <section id="how-it-works">
+           <h2>How it works?</h2>
+       </section>
+   </main>
+
+</body>
+</html>

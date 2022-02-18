@@ -1,0 +1,8 @@
+Eğitim Yari : Udemy
+Eğitmen : Sadık Turan 
+Kurs : Sıfırdan ileri seviyeye 'Web Geliştirme': Html,Css,Sass,Flexbox,Bootstrap,Javascript,Angular,JQuery,Asp.Net Mvc&Core Mvc
+
+
+Notlar:
+
+*Seo için önemli : SearchEngineJournal ,seohocasi.com

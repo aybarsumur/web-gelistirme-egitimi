@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        Box Sizing:
+        https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+        Border box ı content box olarak kullandığımız zaman ( varsayılan tarayıcı özelliği zaten bu) child element, parent elementin içinde onun kapsamı kadar yer alır ve buna %100 dememiz gerekiyor ki parentın içeriği kadar bir kapsamı olabilsin childin.
+        Eğer content box iken ektra bir padding ve border bilgisi verecek olursak bu değerler child elemana ektra olarak etki edecektir. bu değerler, biz 100% dememizden ötürü child kendini parent(container element) içinde sığdırmaya çalışacak fakat başaramayıp dışarı taşacaktır.
+        Bunu engellemek için border-box kullanıyoruz. Child elemen parent içine yerleşirken, child elemandan gelen padding ve border değerleri de içinde olacak şekilde parent içine sığdır demiş oluruz.
+
+        Aşağıdaki örnekte border-box ı kapayıp açarak daha içi anlayabilirisin
+        Burada width değerinden 100% ü de kaldırarak aynı sonucu elde elebilirsin. Fakat width değerine 100% dememdeki en büyük gaye, ileride bir container içinde iki kutuyu yanyan getirmek istediğimizde (%30-%70 gibi) bunlara pedding ve border değerleri verdiğimiz taktirde yanyana durmadıkları göreceğiz. Çünkü sayfanın %100 ünü aştığı anda bir kutu aşağı doğru inecek. Bunu önüne geçmek için ya her kutunun her ekran boyutunda genişlik değerleri ile oynayarak ayar yapmak lazım yada bu şekilde çalışmak 
+        */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        #showcase {
+            background-color: #2E4C6D;
+            height: 500px;
+            width: 100%;
+            /* Bu kutu içine 4 tane kutu koymak isteyelim ve her biri eşit genişlikte yani içinde bulunduğu parentin %25 i kadar olsun. Eğer bunlardan birine +1 border bile ekleseniz 101 olacağından biri alt satıra düşecektir. Bunun önüne geçmek için yani içerik+padding+border toplamı %25 demenin yolu width:100% ve border-box kullanmak*/
+            padding: 10px;
+            border: 5px solid red;
+        }
+
+        #how-it-works {
+            background-color: #FC997C;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Movies</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+        <section id="showcase">
+            <h1>Welcome to MovieApp</h1>
+        </section>
+        <section id="how-it-works">
+            <h2>How it works?</h2>
+        </section>
+    </main>
+
+</body>
+
+</html>

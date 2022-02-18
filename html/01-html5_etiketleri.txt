@@ -1,0 +1,122 @@
+****** ETİKETLER - assets/html5-reference.pdf ******
+
+Küçüktür büyüktü işaretler arasında bir etiket oluşturuyoruz
+Her etiketin bir de kapanış etiketi olması gerek
+Her etiketi kapsayan bir içerik olması gerek;
+
+<etiket>
+    içerik
+</etiket>
+
+Etiket içinde farklı etiketler de olabilir.
+Sayfamızı indexleyen arama motoru bizim etiketlerimize göre sayfamızı değerlendirir. Neyin başlık neyin link neyin paragraf vs. olduğunu verdiğimiz etiketler vasıtası ile anlar.
+
+<!doctype html>  => Bu etiket sayesinde tarayıcı sayfanın html5 formatında hazırlandığını anlar ve buna göre sonraki etiketleri 
+    anlamlandırmaya başlar
+
+<html>  => Html sayfalarının tüm içerikleri mutlaka <html> … </html> etiketi arasına gelmelidir.Etiketinin 2 alt öğesi vardır. 
+    Bunlar <head> ve <body> etiketleridir.
+
+<head>  => Html sayfasının kullandığı harici kaynakların (css ve javascript dosyaları) sayfaya tanıtıldığı kısımdır. Ayrıca sayfanın 
+    arama motorları tarafından ulaşılabilir olması için sayfayı tanımlayan özet bilgilerin (meta etiketleri) eklendiği kısımdır. Head etiketinin alt öğeleri title ve meta etiketleridir.
+
+<title>  => Sayfa başlığını temsil eder.
+<meta>  => Sayfayı arama motorlarına tanıtmak için kullandığımız etikettir. meta etiket türleri ; 
+    • Title : Sayfa başlığı 
+    • Charset : Hangi karakter setini kullandığını gösterir örn; UTF-8 
+    • Description : Sayfa açıklaması 
+    • Keywords : Anahtar kelimeler 
+    • viewport: Responsive tasarım için gerekli 
+    • refresh: Sayfa yenileme süresi (saniye)
+
+<body>  => Sayfa üzerinde gösterilen tüm nesneler bu bölümdedir.
+
+<style>  => Görüntü (CSS) ile alakalı olan etiketlerin olduğu bölüm
+
+<h1> … <h6>  => Başlık etiketleri <h1>, <h2>, <h3>, <h4>, <h5> ve <h6> olmak üzere 6 tanedir.
+    ** Tarayıcılar başlık etiketlerine varsayılan olarak bir font büyüklüğü atarlar ancak buradaki font büyüklüğü önemli değildir çünkü her bir h etiketine atanan font büyüklüğünü css ile değiştirebiliriz.
+    Burada önemli olan h etiketlerine yüklenen anlamlardır. Çünkü sitemizi ziyaret eden arama motorları kullanılan h etiketlerine göre yazılara anlam yüklerler. Örneğin; h1 etiketi her bir html sayfasında bir tane olmalıdır ve sayfanın amacını özetleyen en önemli başlık türüdür.
+    ** Block etikettir.
+
+<p>  => Paragraf oluşturmak için kullanılır.
+    ** içeriğinde bir yazı içeriği olmalıdır.
+    ** Block etikettir.
+    ** Tarayıcı varsayılanı olarak öncesinde ve sonrasında biraz boşluk bırakılır.
+    ** p etiketi içinde başka bir p etiketi oluşturulmamalıdır. 
+    
+<br>   => Bir alt satıra geçmek için <br> etiketi kullanılır. 
+
+<b> ve <strong>  => Kalın yazı yazmak için kullanılır.
+    ** İki etikette kalın yazı yazar ancak <strong> içine aldığımız bilginin öneminin fazla olduğunu belirtmiş oluyoruz.
+
+<i> ve <em>  => Italic yazı yazar.
+    ** em etiketi ile bir yazıyı vurgulamış oluyoruz.
+
+<u>, <ins> ,<del>  => 
+    <u> ve <ins> altı çizili yazı yazar.
+    <del> etiketi ise üstü çizili yazı yazar.
+    ** del in kullanım amacı eski bir içeriğin üzerini çizmek ve ins ile yeni bir değer eklendiğini belirtmektir.
+
+<ul>, <ol>, <li>  => 
+    <ul> etiketi ile sırasız liste oluşturulur.
+    <ol> etiketi ile sıralı liste oluşturulur.
+    <li> her bir liste elemanını temsil eder.
+    ** Sıralı işlemlerde kullanılır.
+    ** Liste işaretleri çok önemli değildir çünkü bunları css ile rahatlıkla değiştirebilir ya da     silebiliriz.
+    ** Genelde menüleri liste elemanlarıyla oluştururuz.
+
+<img>  => Resim eklemek için kullanılır.
+    src : resmin yolunu belirtir. Yol bilgisayardaki bir resim olabilir ya da internet üzerinden resim adresi olabilir.
+    Alt : resim belirtilen yolda bulunamazsa gösterilecek yazıdır. Ayrıca resmin arama motorlarında bulunması için gereken bir yazıdır. Seo açısından eklenmelidir.
+    src, alt gibi kullanılan başlıklara attribute denir.
+
+<form>  => Görevi, <form> ... </form> etiketleri içinde bulunan html kontrolleri aracılığıyla kullanıcılardan toplanan bilgileri 
+    server'a göndermektir.
+    Örneğin bir internet sitesindeki üyelik formunu doldurduğumuzda girdiğimiz bilgileri form nesnesi tarayıcıdan alıp server'a taşır.
+    ** Henüz programlama kısmına geçmediğimizden dolayı verilerin nasıl taşınacağını bilmiyoruz şu an sadece form tasarımı ile ilgileniyoruz.
+    Form Kontrol Türleri ;
+    <input type="text"> : Alınacak olan bilgi sözel bir ifade ise kullanılır.
+    Örneğin ; Ad ,adres vb.
+    <input type="radio"> : Alınacak olan bilgi çoklu seçim içinden sadece birinin seçilmesi istendiğinde kullanılır. Örneğin cinsiyet.
+    <input type="checkbox"> : Alınacak olan bilgi sunulan alternatifler içinden birden fazla seçim istendiğinde kullanılır. Örneğin hobiler.
+    <select> : Seçenekler arasından sadece birinin seçilmesini istediğimiz zaman kullanılır.
+    Örneğin, şehir seçimi.
+    <input type="submit"> : Formu server'daki web programına gönderecek olan buton.
+
+<table>  => Tablo oluşturmak için kullanılır.
+    • Her satır <tr> ile ifade edilir.
+    • Satır içindeki her kolon <td> ile ifade edilir.
+    • Başlık kolonu <th> ile ifade edilir.
+    • Tablo genişliği style="width:100%" ile verilir.
+    • Satır birleştirmek için rowspan kullanılır.
+    • Sütun birleştirmek için colspan kullanılır.
+
+<a>  => Link oluşturmak için kullanılır.
+    <a href="url">link yazısı</a>
+    href : yönlendirilecek kaynak yoludur.
+    target : “_blank” özelliği sayfayı başka segmede açmak için kullanılır.
+    ** link için text kullanmak yerine resimde kullanabilirsiniz.
+        <a href=”kucukresim.jpg”>
+            <img src=”buyukresim.jpg”>
+        </a>
+
+<div>  => Div bir bölme oluşturmak için kullanılır. Örneğin ürünlerin listelendiği bir html sayfasında her bir ürünü bir div 
+    içine alabiliriz. Eğer ki 50 tane ürün göstereceksek 50 tane div ile ürünlerin her birini sistematik bir şekilde gruplayabiliriz. Bu
+    gruplama sayesinde ortak olarak hareket eden her bir ürün div’ine ortak görüntü özellikleri yani css kodları uygulayabiliriz.
+    Ya da body etiketinden hemen sonra bir div ekleyip tüm içerikleri bir div içine alarak tüm sayfaya bir genişlik uygulayabiliriz.
+    ** div etiketide p etiketi gibi bir block etikettir.
+
+Html5 Semantic Etiketler  =>
+    Html5 ile gelen anlamsal etiketler kullanmamız arama motorları açısından büyük önem taşımaktadır. Çünkü oluşturduğumuz içerikleri html semantik etiketler içinde sunuyor olmamız sitemizi indekslemeye gelen arama motorlarına içerik ile alakalı daha anlamsal bilgi sunduğumuzdan dolayı ziyaretçi sayımızı olumlu etkileyecektir.
+    Bazı html5 semantic etiketler :
+    <header> ,<nav> ,<section>, <article>, <aside>, <figure>, <figcaption>, <footer>,<details>, <summary>, <mark>, <time>
+
+İframe  => Bir web sayfasının içerisine farklı bir web sayfasını çağırıp, görüntülememize yardımcı olan bir HTML etiketidir.
+    ** iframe youtube video’sunu bir siteye eklemek için kullanılabilir.
+    iframe için tanımlayabileceğimiz özellikler ;
+    src : kaynak yolu (aynı klasör içindeki index.html sayfası ya da başka bir internet adresi olabilir.)
+    frameborder : çerçeve kenarlık kalınlığı.
+    width : iframe genişliği
+    height : iframe yüksekliği
+
+Kaynak: Sadık Turan - Komple Uygulamalı Web Geliştirme Kursu - Html 5
