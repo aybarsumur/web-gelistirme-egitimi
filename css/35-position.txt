@@ -1,0 +1,29 @@
+**** POSITION ****
+
+Position propertisinin alabileceği 5 değer vardır.
+static
+relative
+fixed
+absolute
+sticky
+
+Bunu kullanmamızdaki ana amaç istediğimiz elemanın hareket edebilmesi
+
+static: default olarak gelir. Normal akış içinde pozisyon alır
+
+relative: elemanı 4 köşeden konumlanrıabiliriz. top,left,right,bottom ...normal akışı bozmadan,elemanın o anki yerinden verdiğim değerlere göre hareket ettirir.
+
+.div2 {
+    position:relative;
+    top: 50px;
+    left: 50px;
+}
+yani, soldan üstten 50px kaydırmış oluyoruz. Negatif de değer verilebilir.
+
+absolute: normal akışı bozarak hareket ettiririz. Yani eğer herhangi bir etikete position relative özelliği verdiysen ona vermediysen bodyi(default) esas alarak onun en üst sınırına kendini konumlandırır ve oradan değer alır
+
+.div2 {
+    position:absolute;
+    top: 50px;
+    left: 50px;
+}
