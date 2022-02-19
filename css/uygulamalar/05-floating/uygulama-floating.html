@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        /* renkler color hunttan https://colorhunt.co/ */
+        header,
+        footer {
+            background-color: #8267BE;
+            color: #FFBD35;
+            padding: 15px;
+        }
+
+        /* 
+        sayfanın solundan itibaren float yap. 
+        inline block ile arasındaki fark elemanlar arası boşluk kalmaması
+        */
+        .col {
+            float: left;
+            padding: 15px 15px 15px 0;
+        }
+
+        /* sayfanın %25 ini kapla */
+        .menu {
+            width: 25%;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 8px;
+            margin-bottom: 8px;
+            background-color: #502064;
+            color: #fff;
+        }
+
+        .menu li:hover {
+            cursor: pointer;
+            background-color: #8267BE;
+        }
+
+        /* sayfanın %75 ini kapla */
+        .content {
+            width: 75%;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Header</h2>
+    </header>
+
+    <main class="clearfix">
+        <div class="menu col">
+            <ul>
+                <li>Html</li>
+                <li>Css</li>
+                <li>Javascript</li>
+            </ul>
+        </div>
+        <div class="content col">
+            <h1>Komple Web Geliştirme Eğitimi</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore commodi inventore saepe dicta fuga
+                vitae iusto blanditiis omnis, in quae consequuntur autem temporibus rem odit dolor aliquam enim beatae
+                tenetur.
+            </p>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium sunt accusamus, veritatis ex iure
+                quae explicabo eligendi atque enim sit delectus, quod impedit animi inventore deserunt molestiae
+                recusandae possimus sint!
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+</body>
+
+</html>

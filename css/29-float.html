@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            background-color: chocolate;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            color: white;
+            background-color: brown;
+            float: right;
+            /* display: inline-block diyip containere de text-align right deseydim tamamı tek satırsa sağ tarafta dizilirdi */
+        }
+
+        #box1 {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        text-align => inline ve inline-block elemanlarda
+        float => block elemanlarda kullanılır
+     -->
+    <div id="container">
+        <div class="box" id="box1">kutu 1</div>
+        <div class="box">kutu 2</div>
+        <div class="box">kutu 3</div>
+    </div>
+
+
+</body>
+</html>

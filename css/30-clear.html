@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            background-color: chocolate;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: brown;
+            float: right;
+        }
+
+        #box1 {
+            float: left;
+        }
+
+        /* 
+        Floattan sonra gelen elemanların normal akış içinde hareket edebilmesi için clear uygulamamız gerek. Bir önceki konuda(29-float) bir kontainer içinde float özelliği tanımlamıştık fakat containerin background özelliğini görememiştik. Clear bize bunu görmemizi sağlıyor. Floatı temizleme . Ayrıyeten bunu yapmadığımız taktirde container altına eklediğimiz bir p elemanı bile float özelliğinden dolayı containerı görmeyip boxlar arasına girme eğiliminde olacaktır. Aşağıdaki clearfix i kapatıp test et.
+        */
+
+        /* 2.yöntem : container den sonra eklenmesini istediğim için pseudo element olarak çalıştırıyorum . content:"" demekteki gaye bu ekleyeceğin elemanda bir içerik olması, display:block diyerek de block bir eleman istediğimi söylüyorum.Yani esasında bakacak olursan aşağıda yazmış olduğum div elemanı tarif ediyorum*/
+        .clearfix::after {
+            content: "";
+            display: block;
+            /* yukarıda hem sağdan hem soldan float vermiştim. Bundan ötürü de clear: both; kullanıyorum. ama sadece sağdan yada so0ldan vermiş olsaydım floatı clear: left yada right yeterli olacaktı */
+            clear: both;
+        }
+     
+    </style>
+</head>
+<body>
+    
+    <div id="container" class="clearfix">
+        <div class="box" id="box1">kutu 1</div>
+        <div class="box">kutu 2</div>
+        <div class="box">kutu 3</div>
+        <!--1.yöntem: Alttaki şekilde de float uyguladığımız elemanların peşine bir clear içeren eleman ekleyerek de elemanların normal akışına dönmelerini sağlayabiliriz. -->
+        <!-- <div style="clear: both;"></div> -->
+    </div>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, quasi sed molestiae unde qui quisquam molestias dolor, cumque temporibus error tenetur enim alias obcaecati autem id. In sunt recusandae officia!</p>
+
+
+</body>
+</html>
