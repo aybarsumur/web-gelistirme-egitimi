@@ -21,7 +21,7 @@ main {
         to bottom, 
         rgba(252, 153, 124, 0.2),
         rgba(250, 81, 30, 0.2)),
-    url('/css/assets/bg-4.jpeg');
+    url('../img/bg-4.jpeg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -154,7 +154,7 @@ main {
 .features__left {
     background: 
     linear-gradient(to bottom, rgba(252, 153, 124, 0.2),rgba(250, 81, 30, 0.2)),
-    url('/css/assets/features.jpeg');
+    url('../img/features.jpeg');
     background-size: cover;
     background-position: top center;
 }
