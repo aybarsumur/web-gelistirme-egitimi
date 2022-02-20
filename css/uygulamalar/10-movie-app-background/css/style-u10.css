@@ -17,11 +17,8 @@ main {
 
 #showcase { 
     background: 
-    linear-gradient(
-        to bottom, 
-        rgba(252, 153, 124, 0.2),
-        rgba(250, 81, 30, 0.2)),
-    url('/css/assets/bg-4.jpeg');
+    linear-gradient(to bottom, rgba(252, 153, 124, 0.2),rgba(250, 81, 30, 0.2)),
+    url('../img/bg-4.jpeg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -42,6 +39,7 @@ main {
     width: 60%;
     border-radius: 10px;
 }
+
 
 #showcase h1 {
     position: absolute;
@@ -121,7 +119,6 @@ main {
 }
 
 .row::after {
-    /* row dan sonra clearfix yaptırıyor */
     content: "";
     display: block;
     clear: both;
@@ -154,18 +151,21 @@ main {
 .features__left {
     background: 
     linear-gradient(to bottom, rgba(252, 153, 124, 0.2),rgba(250, 81, 30, 0.2)),
-    url('/css/assets/features.jpeg');
+    url('../img/features.jpeg');
     background-size: cover;
     background-position: top center;
 }
 
 .features__right {
     background-color: #edf5f7;
-    padding: 30px;
+    padding: 40px;
     vertical-align: top;
 }
 
-.features__left, .features__right { height: 350px;}
+.features__left,
+.features__right {
+    height: 350px;
+}
 
 .features__right h3 {
     font-size: 30px;
@@ -222,11 +222,11 @@ main {
     margin: 6px 0;
 }
 
-/* .clearfix::after {
+.clearfix::after {
     content: "";
     display: block;
     clear: both;
-} */
+}
 
 .container {
     margin: 0 auto;
@@ -246,60 +246,22 @@ main {
 }
 
 #backtotop i:hover {
-    color:#1e3247;
+    color:#2E4C6D;
 }
 
 .counter {
-    background: 
-    linear-gradient(
-        to bottom, 
-        #FC997C 0%,
-        #FC8B69 100% 
-    );
+    background: linear-gradient(to bottom, #fc997c 0%, #fc8b69 100%);
     text-align: center;
     padding: 50px;
 }
 
 .counter__item {
-   font-size: 30px;
-   font-weight: 500;
-   color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
 }
 
 .counter h4 {
     margin: 0;
     color: #fff;
-}
-
-.card-container {
-    padding: 10px;
-}
-
-.card {
-    background-color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 10px 10px 40px rgba(52, 58, 64, 0.1);
-    /* position: relative; */
-    /* top: 0; */
-    transition: all .3s;
-}
-
-.card:hover {
-    /* top: -10px; */
-    /* dikey konumda 10px yukarı kaydır demiş oldum */
-    transform: translateY(-10px);
-}
-
-.card-image {
-    max-height: 350px;
-}
-
-.card-body {
-    padding: 10px;
-}
-
-.img-fluid {
-    /* resimlere responsive özellik vermiş olduk */
-    width: 100%;
 }
