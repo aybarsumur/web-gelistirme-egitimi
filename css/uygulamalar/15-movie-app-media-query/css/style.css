@@ -7,18 +7,12 @@
 /* Button Css*/
 @import url("buttons.css");
 
+/* Base Css */
+@import url("base.css");
 
-* {
-    box-sizing: border-box;
-}
 
 html {
     scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    font-family: 'Lato', sans-serif;
 }
 
 main {
@@ -34,8 +28,7 @@ main {
     url('../img/bg-4.jpeg');
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
-    height: 80vh;
+    height: 40vh;
     width: 100%;
     position: relative;
 }
@@ -46,7 +39,11 @@ main {
     left: 50%;
     transform: translate(-50%,-50%);
     color: #fff;
-    font-size: 30px;
+    /* 
+    contente kapsayıcı bir sınıf ve altındaki h vs diğer yazı elemanları computed olarak bu değer ile orantılı ayarlanıyor. Burada önce küçük ekran tasarım ondan sonra diğerlerini tasarladığımdan dolayı bu değeri küçük tutuyorum. 
+    Aşağıda da bunları üst breakpointlere geçtiğimde ne olmasını istediğimi belirtiyorum. 
+    */
+    font-size: 20px;
     background: rgba(46, 76, 109, 0.3);
     padding: 20px;
     width: 60%;
@@ -58,9 +55,43 @@ main {
     top: 50%;
     margin: 0;
     color: #fff;
-    font-size: 45px;
+    /* font-size: 45px; */
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    #showcase { 
+        height: 50vh;
+    }
+
+    #showcase .content {
+        font-size: 23px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #showcase { 
+        height: 60vh;
+    }
+
+    #showcase .content {
+        font-size: 25px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    #showcase { 
+        /* background-attachment: fixed; */
+        height: 70vh;
+    }
+
+    #showcase .content {
+        font-size: 26px;
+    }
 }
 
 .main-header {
@@ -124,32 +155,6 @@ main {
 #how-it-works { 
     padding: 10px;
     text-align: center;
-}
-
-.row {
-    margin-top: 40px;
-}
-
-.row::after {
-    /* row dan sonra clearfix yaptırıyor */
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.col-4 {
-    float: left;
-    width: 25%;
-}
-
-.col-3 {
-    float: left;
-    width: 33.3%;
-}
-
-.col-2 {
-    float: left;
-    width: 50%;
 }
 
 .icon-box h3 {
@@ -232,17 +237,6 @@ main {
     margin: 6px 0;
 }
 
-/* .clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
-} */
-
-.container {
-    margin: 0 auto;
-    width: 1000px;
-}
-
 #backtotop {
     position: fixed;
     bottom: 10px;
@@ -309,15 +303,13 @@ main {
     padding: 10px;
 }
 
-.img-fluid {
-    /* resimlere responsive özellik vermiş olduk */
-    width: 100%;
-}
-
 footer {
     background-color: #2E4C6D;
     padding: 30px;
     margin-top: 30px;
+
+    position: relative;
+    bottom: -270px;
 }
 
 footer a {
