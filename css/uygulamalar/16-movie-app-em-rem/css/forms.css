@@ -1,0 +1,81 @@
+.signup-page {
+    padding-top: 6rem;
+}
+
+.signup-title {
+    text-align: center;
+    font-size: 30px;
+    color: #2E4C6d;
+}
+
+.signup-form {
+    width: 100%;
+}
+
+/* form genişliği */
+@media (min-width: 768px) {
+    .signup-form {
+        width: 50rem;
+        margin: auto;
+    }
+}
+
+/* 
+tüm elemanları block haline getirdik 
+:not([type="checkbox"]) ile type'ı checkbox olanları çıkarmış oluyoruz
+*/
+.signup-form label,
+.signup-form input:not([type="checkbox"]),
+.signup-form select {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* 
+type'ı checkbox ve ondan sonra gelen ilk label 'ı da seç
+*/
+.signup-form input[type="checkbox"],
+.signup-form input[type="checkbox"] + label {
+    display: inline-block;
+    width: auto;
+    margin-top: 15px;
+}
+
+.signup-form button[type="submit"] {
+    display: block;
+    margin-top: 15px;
+}
+
+.signup-form input:not([type="checkbox"]),
+.signup-form select {
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+}
+
+.signup-form input:not([type="checkbox"]):focus,
+.signup-form select:focus {
+    outline: none;
+    color: #2E4C6d;
+    background-color: yellow;
+    border: 1px solid greenyellow;
+}
+
+/* Alttaki 3 style custom checkbox */
+.signup-form input[type="checkbox"] {
+    /* varsayılan değeri yokettik */
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #2E4C6d;
+    vertical-align: bottom;
+    border-radius: 50%;
+}
+
+.signup-form input[type="checkbox"]:hover {
+    background-color: gray;
+}
+
+.signup-form input[type="checkbox"]:checked {
+    background-color: #FC997C;
+}

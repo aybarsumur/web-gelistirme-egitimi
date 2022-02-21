@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em Rem Units</title>
+    <style>
+    
+        /* #kutu-1 {
+            font-size: 20px;
+        }
+
+        #kutu-1 p {
+            kapsayıcı olan elemanın font değerinin 1.5 katını almış olur
+            font-size: 1.5em;
+        } */
+
+        html {
+            /* bunu böyle vermenin kötü yanı kullanıcı gidip tarayıcısından font büyüklüğünü değiştirirse, bizim sayfamızda aşağıda sabit bir değer verdiğimiz için hiç birşey değişmez
+            Bunun önüne geçmek için % değer vermek gerek. Yani google tarayıcı standart 16px. ben eğer html font size'ına %62,5 dersem 16*0,625 = 10px e denk gelir. Böylelikle kullanıcı tarayıcısından büyük yazı tipini seçtiğinde benim seyfam da aynı oranda büyür.
+            */
+            /* font-size: 10px; */
+            font-size: 62,5%;
+        }
+
+        body {
+            font-size: 1.5rem;
+        }
+
+        /* 
+            rem de ise kapsayıcı değil sayfa default (html) değerine bakar. Bu da burada 16*2 gelecek(Yukarıda değiştirmeden önce) 
+            Yani, rem in en güzel yanı html ye bir değer atadığımız zaman tüm sayfada bu geçerli olarak hepsi değişir.
+        */
+        /* #kutu-1 p{
+            font-size: 2rem;
+        }
+
+        #kutu-1 h2 {
+            font-size: 3rem;
+        } */
+
+        /* Üstteki html mobil değeri olsun */
+        @media (min-width: 576px) {
+            html {
+            font-size: 11px;
+            }
+
+            #kutu-1 h2 {
+            font-size: 1.8rem;
+        }
+        }
+
+        @media (min-width: 768px){
+            html {
+            font-size: 12px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="kutu-1">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio veniam voluptas explicabo. Exercitationem eligendi cumque est ipsum, eos blanditiis alias consectetur dolore tenetur, modi sit optio laboriosam! Perspiciatis, repellat quos.</p>
+    </div>
+
+    <div id="kutu-2">
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio veniam voluptas explicabo. Exercitationem eligendi cumque est ipsum, eos blanditiis alias consectetur dolore tenetur, modi sit optio laboriosam! Perspiciatis, repellat quos.</p>
+    </div>
+
+</body>
+</html>
