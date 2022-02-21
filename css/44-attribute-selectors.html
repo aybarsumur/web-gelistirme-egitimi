@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Attribute selector */
+        /* a etiketlerinden target attribute ü tanımlanmış olanlara ulaş ve background rengini kırmızı yap*/
+        /* a[target] {
+            background-color: red;
+        }
+
+        */
+        /* sayfadaki tüm class tanımlanmış olanları kasteder */
+        /* [class] {
+            background-color: blue;
+        }  */
+
+        /* Attribute value selector */
+        /* Sayfadaki a etiketlerinden class'ı active olanı bul */
+        /* a[class="active"] {
+            background-color: blue;
+        }  */
+        
+        /* Attribute '*' selector  */
+        /* İçerisinde active class'ı olan tüm elemanları kapsar(içerisinde active geçen tamamını kapsar active-vesaire gibi) */
+        /* [class*="active"] {
+            background-color: blue;
+        } */
+
+        /* Attribute '~' selector(tilda selector)  */
+        /* içerisinde active class'ı olan tüm elemanları kapsar(active-vesaire şeklinde olmayacak) */
+        /* [class~="active"] {
+            background-color: blue;
+        } */
+
+
+        /* Attribute '|' selector(pipe selector) */
+        /* ilgili value bilgisi başlangıçta olacak ve class içinde yalnız olacak(active veya active-vesaire gibi)*/
+        /* [class|="active"] {
+            background-color: blue;
+        } */
+
+        /* Attribute '^' selector(caret selector)  */
+        /* içinde en başta active sınıfı olan elemanları seçer.(active active-vesaire hepsi)   */
+        /* [class^="active"] {
+            background-color: blue;
+        } */
+
+        /* Attribute '$' selector */
+        /* içinde istenilen value yalnız veya sonda ise seçer.(vesaire vesaire active gibi) */
+        [class$="active"] {
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+
+    <span class="text active">text</span>
+
+    <nav>
+        <a href="" target="_blank">home</a>
+        <a href="" class="active">about</a>
+        <a href="" class="link">contact</a>
+    </nav>
+
+</body>
+</html>
