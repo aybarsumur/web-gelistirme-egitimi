@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Alignments</title>
+
+    <style>
+        .container {
+            display: flex;
+
+            /* 
+            Elemanları herbirinin hizalanması
+
+            justify-content : elemanları yatayda hizalamak için kullanıyoruz
+            align-items : elemanları dikeyde hizalamak için kullanıyoruz
+            */
+
+            /* 
+            YATAYDA HİZALAMA
+            justify-content: flex-start; default özellik. Elemanları sol başta toplar
+            justify-content: flex-end; Elemanları sağ başta toplar
+            justify-content: center; Elemanları ortalar
+            justify-content: space-around; Elemanların sağına soluna ve aralarına boşluk vererek düzenli bir şekilde containera dağıtır. Solda sağdan x, her iki eleman arası da 2x boşluk kalacak şekilde.
+            justify-content: space-between; Elemanların aralarına boşluk vererek düzenli bir şekilde containera dağıtır. Solda sağdan 0, her iki eleman arası da eşit boşluk kalacak şekilde.
+            justify-content: space-evenly; Elemanları aralarına sağına soluna eşit boşluk vererek düzenli bir şekilde containera dağıtır.
+
+            */
+
+            /*
+            DİKEYDE HİZALAMA 
+            align-items: stretch; default özellik. Elemanlar container içine boylamasına yayılır.
+            align-items: flex-start; elemanlar içerikleri kadar yer kaplar. Sol üstte konumlanır.
+            align-items: flex-end; elemanlar içerikleri kadar yer kaplar. Sol altta konumlanır.
+            align-items: center; elemanlar içerikleri kadar yer kaplar. Ortada konumlanır.
+
+            */
+
+            /* 
+            EĞER; flex-direction: column; YAPILIRSA: BU SEFERE YATAYDA HİZALAMA align-items, DİKEYDE HİZALAMA justify-content OLUR. ÖNEMLİ!!!
+
+            */
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            height: 500px;
+            background-color: #034f84;
+            /* padding: 15px; */
+        }
+
+        .item {
+            background-color: #f7786b;
+            padding: 30px;
+            /* margin: 20px; */
+            color: #fff;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+    </div>
+</body>
+</html>

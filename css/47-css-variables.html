@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Variables</title>
+    <style>
+        /*
+        root içinde tanımlanan değişkenler globaldir 
+        aşağıda renkler için bir kapsam tanımladık 
+        -- ile tanımlanır.
+        artık tek yerden yönetebiliyorum.Yani değiştirmek istediğim taktirde tek bir değişiklik ile tüm sayfada değişilik oluyor.
+        */
+        :root {
+            --gray: #b2b2b2;
+            --white: rgb(238, 238, 238);
+
+        }
+        body {
+            /* bu şekilde ise ezebiliriz. */
+            --gray: #f18973;
+            background-color: var(--gray);
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--gray);
+        }
+
+        .container {
+            color: var(--gray);
+            background-color: var(--white);
+            padding: 20px;
+        }
+
+        button {
+            background-color: var(--white);
+            color: var(--gray);
+            border: 1px solid var(--gray);
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <div class="container">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, necessitatibus sapiente ut voluptas numquam, ratione doloremque cum perspiciatis voluptates voluptatum odit deserunt, perferendis laboriosam repellat quae vitae eveniet? Consequatur, beatae.</p>
+        <div>
+            <button>Ok</button>
+            <button>Cancel</button>
+        </div>
+    </div>
+</body>
+</html>

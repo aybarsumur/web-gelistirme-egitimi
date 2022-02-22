@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Alignments</title>
+
+    <style>
+        .container {
+            display: flex;
+
+
+            height: 500px;
+            background-color: #034f84;
+        }
+
+        .item {
+            background-color: #f7786b;
+            padding: 30px;
+            margin: 20px;
+            color: #fff;
+            font-size: 25px;
+
+            /* 
+            PROPERTIES
+
+            flex-grow: Elemanların hangi oranda büyütüleceği. tüm elemanlara yada tekil kullanılır.
+            flex-grow: 0; default değer 0. 
+            flex-grow: 1; elemanlar içeriği tamamen kaplar
+            
+            flex-grow: 1;
+
+
+
+            flex-basis: Elemana başlangıç genişliği verebiliriz. Önce bu değer verilir, sonrasında growdan gelen paylaştırma yapılır.Sayfa küçülmeye başladığında ve ne zaman ki yer kalmaz bu değer küçülmeye başlar ve minimum içerik kadar yer kaplar. 
+
+            flex-basis: 200px;
+
+
+
+
+            flex-shrink: Eğer bir elemanın hiçbir zaman bir değer altına inmesini istemiyorsak kullanırız. Bu flex-basis ile kullanılır. 1 default değerdir. 0 verirsen basis değeri altına inmez.
+
+            flex-shrink: 0;
+
+
+
+            SON OLARAK;
+            YUKARIDAKİ 3 PROPERTY'İ TEK BİR PROPERTY OLARAK KULLANABİLİRİZ.
+            flex: grow shrink basis;
+            flex:0 0 200px
+
+            YADA bunu % olarak kullanabilir. O zaman satırın sütunu % olarak kapla anlamında
+            flex: 25%;
+
+
+            SIRALAMA;
+            order: 0; default değeri 0 dır. - değer verdiğin eleman otomatikman başa gelir
+            */
+        }
+
+        .item-1 {
+            /* 2-3-4 içerikleri kadar yer kaplarken 1 kalan alana yayılır. Değer olarak verilen 1 yerine 2-3 kullanırsak değer alanlar orantısal olarak yer kaplar. */
+            /* flex-grow: 2; */
+            flex: 20%;
+            order: 3;
+        }
+
+        .item-2 {
+            /* flex-grow: 1;    */
+            flex: 10%;
+            order: 1;
+        }
+
+        .item-3 {
+            /* flex-basis: 200px;
+            flex-shrink: 0; */
+            /* flex: 0 0 200px; */
+            flex: 30%;
+            /* order: 0; */
+        }
+
+        .item-4 {
+            /* flex-grow: 1;    */
+            flex: 40%;
+            order: -1;
+        }
+
+
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="item item-1">item 1</div>
+        <div class="item item-2">item 2</div>
+        <div class="item item-3">item 3</div>
+        <div class="item item-4">item 4</div>
+    </div>
+</body>
+</html>

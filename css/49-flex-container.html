@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex container</title>
+    <style>
+        .container {
+            /* 
+            display:flex özelliği containera her bir elemanın inline-block şeklinde davranacğı bir özellik kazandırıyor.
+            */
+            display: flex;
+
+            /* 
+            flex-direction; default olarak row gelir.
+            row; satırda sıralama 1-2-3 
+            column; kolonda sıralama (dikine) 1-2-3
+            row-reverse; satırda tersten sıralar 3-2-1
+            column-reverse; kolonda tersten sıralar 3-2-1
+            
+            flex-direction: column-reverse;
+            */
+
+            /* 
+            flex-wrap; satırda yer kalmayınca sonraki öğenin aşağı bir alt satıra kayması 
+            flex-wrap: nowrap; default değer
+            flex-wrap: wrap; yer kalmadıkça son öğe alt satıra iner
+            flex-wrap: wrap-reverse; yer kalmadıkça son öğe üst satıra çıkar
+
+            flex-wrap: wrap-reverse;
+            */
+
+            /* 
+            flex-flow; direction ve wrap özelliğinin aynı anda kullanılabildiği özellik. 
+            Yani, flex-flow: row wrap; denebiliyor. 
+            
+            flex-flow: row wrap;
+            */
+            
+
+            background-color: #034f84;
+            padding: 15px;
+        }
+
+        .item {
+            background-color: #f7786b;
+            padding: 30px;
+            margin: 20px;
+            color: #fff;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 5</div>
+    </div>
+</body>
+</html>

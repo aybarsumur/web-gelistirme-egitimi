@@ -11,7 +11,7 @@
 <body id="body"> 
 
     <header class="main-header">
-        <div class="container">
+        <div id="main-nav" class="container">
             <a href="#" class="main-header__logo">MovieApp</a>
             <nav class="main-nav">
                 <ul class="main-nav__items">
@@ -24,6 +24,11 @@
                     <li class="main-nav__item main-nav__item--login">
                         <a class="btn btn-secondary" href="#">Login</a>
                     </li>
+                    <div class="main-nav__item">
+                        <a href="#" onclick="displayMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
                 </ul>
             </nav>
         </div>
@@ -218,6 +223,14 @@
     <a href="#body" id="backtotop">
         <i class="fas fa-chevron-circle-up"></i>
     </a>
+
+    <script>
+        function displayMenu() {
+            var link = document.getElementById("main-nav");
+            // link classlistesi içinde responsive varsa siler yoksa ekler
+            link.classList.toggle("responsive");
+        }
+    </script>
 
 </body>
 </html>
