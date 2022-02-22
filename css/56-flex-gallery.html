@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flex Gallery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <style>
+
+        h1 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 3rem;
+            text-align: center;
+        }
+        .gallery {
+            display: flex;
+            /* sığmayan bir alt satıra geçsin */
+            flex-wrap: wrap;
+        }
+
+        .gallery div {
+            /*aynı satırdakileri eşit oranda büyült */
+            flex-grow: 1;
+            margin: 3px;
+            /* taşmayı engelle */
+            overflow: hidden;
+        }
+
+        img {
+            /* image içinde bulunduğu divi kaplasın */
+            width: 100%;
+            /* değişik resim ölçüleri olduğu için bunlar da divlerin içinde standart dursun istediğimden height 100%. tabii bu resim kalitesini bozuyor */
+            height: 100%;
+            /* resmi dive tam oturtuyorum ki height 100% den dolayı bozulanlar biraz olsun düzelsin */
+            object-fit: cover;
+            /* transform özelliğine 0,3sn de easy-out effekti ile geç diyorum */
+            transition: transform .3s ease-out;
+            
+        }
+
+        img:hover {
+            /* %20 oranında büyült */
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Image Gallery</h1>
+
+    <div class="gallery">
+        <div><img src="https://picsum.photos/300/200?random=1"></div>
+        <div><img src="https://picsum.photos/400/300?random=2"></div>
+        <div><img src="https://picsum.photos/300/300?random=3"></div>
+        <div><img src="https://picsum.photos/500/500?random=4"></div>
+        <div><img src="https://picsum.photos/300/300?random=5"></div>
+        <div><img src="https://picsum.photos/300/400?random=6"></div>
+        <div><img src="https://picsum.photos/300/300?random=7"></div>
+    </div>
+</body>
+
+</html>
