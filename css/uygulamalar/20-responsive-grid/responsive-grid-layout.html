@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Layout</title>
+    <style>
+        .container {
+            display: grid;
+            gap: 5px;
+
+            grid-template-areas: "header_area header_area header_area"
+                                 "sidebar_area content_area content_area "
+                                 "box-1_area box-2_area box-2_area"
+                                 "footer_area footer_area footer_area";
+        }
+
+        .header {
+            grid-area: header_area;
+            background-color: tomato;
+            text-align: center;
+        }
+
+        .sidebar {
+            grid-area: sidebar_area;
+            background-color: blue;
+        }
+
+        .content {
+            grid-area: content_area;
+            background-color: yellow;
+        }
+
+        .footer {
+            grid-area: footer_area;
+            background-color: tomato;
+        }
+
+        .box-1 {
+            grid-area: box-1_area;
+            background-color: violet;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-areas: "header_area"
+                                    "sidebar_area"
+                                    "content_area"
+                                    "box-1_area"
+                                    "box-2_area"
+                                    "box-2_area"
+                                    "footer_area";
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h2>Page Header</h2>
+        </header>
+        <section class="content">
+            <h3>Lorem, ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque et eaque exercitationem, doloribus nesciunt officiis minima impedit, aspernatur culpa cupiditate doloremque dolor repellat expedita tempore totam. Odit dolores voluptates rerum?</p>
+        </section>
+        <section class="sidebar">
+            <h2>Lorem, ipsum.</h2>
+            <ul>
+                <li>Lorem, ipsum.</li>
+                <li>Fugiat, fuga.</li>
+                <li>Eligendi, perferendis?</li>
+                <li>Placeat, expedita.</li>
+            </ul>
+        </section>
+        <div class="box-1">
+            <h3>Box-1</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quibusdam adipisci recusandae perferendis, obcaecati ipsum magni, id error ipsa eum minus, quas dolores accusamus explicabo ab ea aliquid reiciendis facilis?
+        </div>
+        <div class="box-2">
+            <h3>Box-2</h3>
+            Delectus, repellendus adipisci enim molestiae quam fuga voluptas, rem, quia neque sapiente nihil aperiam corrupti? Ducimus minus unde ratione odit, pariatur ipsam doloremque maxime aliquid nesciunt et soluta recusandae deleniti.
+        </div>
+        <div class="box-3">
+            <h3>Box-3</h3>
+            Earum vero enim distinctio modi consectetur ex aut quas ad, quos sit obcaecati quaerat veniam soluta tempora hic? Veritatis ullam earum culpa assumenda rem ratione ab fuga corporis exercitationem commodi?
+        </div>
+        <footer class="footer">
+            <p>Lorem ipsum dolor sit.</p>
+        </footer>
+    </div>
+</body>
+</html>

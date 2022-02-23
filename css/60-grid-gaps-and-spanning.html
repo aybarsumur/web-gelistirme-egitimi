@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Container</title>
+    <style>
+
+        .container {
+            display: grid;
+
+            /* 6 kolon olsun ve genişliğe göre otomatik ayarla */
+            grid-template-columns: repeat(6, 1fr);
+            
+            /* sadece satırda 10 px boşluk */
+            /* row-gap: 10px; */
+            /* sadece kolonda 10 px boşluk */
+            /* column-gap: 10px; */
+            /* tüm satır sütunlarda 10px lik boşluk uygular */
+            gap: 10px;
+
+            background-color: #034f84;
+        }
+
+        .item {
+            background-color: #f7786b;
+            padding: 20px;
+            color: #fff;
+            font-size: 25px;
+        }
+
+        .item:first-child {
+            /* birinci satırdan başla 3. satırda bitir*/
+            /* grid-row-start: 1;
+            grid-row-end: 3; */
+            /* grid-row: 1 / 3; */
+
+            /* birden başla 2 tane kapla */
+            /* grid-row: 1 / span 2; */
+
+
+            /* ikinci kolondan başla, 5.kolonda bitir demiş oluyorz. Yani esasında kolonları birleştiriyoruz */
+            /* grid-column-start: 2;
+            grid-column-end: 5; */
+            /* grid-column:  2 / 5; */
+
+            /* ikiden başla 3 tane kapla */
+            /* grid-column: 2 / span 3; */
+
+
+            /* grid-area: başlangıç satırı / başlangıç kolonu / kaç satır ilerle / kaç kolon ilerle */
+            grid-area: 1 / 2 / span 2 / span 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+    </div>
+</body>
+</html>

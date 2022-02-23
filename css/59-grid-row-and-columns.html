@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Container</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            /* 
+            Grid Template Columns: Kolon oluşturmamıza yarar
+            grid-template-columns: 150px 250px 400px 150px; kolonların ilki 150 ikinci 250 üçüncü 400px dördüncü 150px olsun. Tabi bunlar sabit bir genişlik. Tarayıcı daraldığı zaman sıkıntı olur. 
+            
+            grid-template-columns: 150px auto 200px auto; Bu şekilde ilki ve üçüncü ye ölçü verdim , diğer ikisine auto değeri vererek bir ve üçden geri kalan alanı iki böldürmüş oldum
+
+            grid-template-columns: auto auto 20% 10%; Bu şekilde 3. eleman ekranın %20 sini, 4. ise %10 u ve geri kalan lana ise ilk ikisi arasında otomatik olarak bölünür.
+
+            grid-template-columns: repeat(4, auto); Bu şekilde yine 4 elemana da auto olarak böldürürüz ekranı. Aynı şekilde (4, 200px) olarak da kullanabiliriz.
+
+            grid-template-columns: 150px 200px 1fr; ilki 150, 2. 200px olsun ve bir de fragment(bölüm) oluştur diyoruz
+
+            grid-template-columns: 150px 200px 1fr 2fr; ilki 150, 2. 200px olsun, 3.de bir fragment(değeri 1fr)  ve 4. bir fragment(değeri 2fr) oluştur diyoruz. Burada 1 ve 2 den sonra kalan alanın 3 ve 4 fr değerleri oranında paylaşır.
+
+            grid-template-rows: 200px; ilk satıra 200px yükseklik ver demiş olduk
+            grid-template-rows: 200px 300px; ilk satıra 200px, 2. ye 300px yükseklik ver demiş olduk
+
+            Eğer, bir yükseklik vererek çalışırsak
+            grid-template-rows: 1fr 2fr; dediğimizde ilk ve ikinci satıra bu vermiş olduğumuz yüksekliği fr olarak orantısal olarak dağıtacaktır . Eğer ilk iki satırdan sonra daha çok satır varsa diğer satırlar içerikleri kadar yer kaplayacaktır.
+
+            Eğer Yükseklik vermez ve
+            grid-auto-rows: 3fr; dersek , yukarıdakini de kullanırsak ilk ikisini 1 ve 2fr, kalanları da 3fr olarak ölçülendirir. 1fr içerik kadardır.
+
+
+            */
+            /* displayın grid olacağını söylüyoruz */
+            display: grid;
+
+            /* height: 800px; */
+            
+            /* grid-template-columns: 150px 250px 400px 150px; */
+            /* grid-template-columns: 150px auto 200px auto; */
+            /* grid-template-columns: auto auto 20% 10%; */
+            /* grid-template-columns: repeat(4, auto); */
+            /* grid-template-columns: 150px 200px 1fr 2fr; */
+            /* grid-template-columns: 150px 200px 1fr; */
+            grid-template-columns: 2fr 1fr;
+
+            /* grid-template-rows: 200px 300px; */
+            grid-template-rows: 1fr 2fr;
+
+            grid-auto-rows: 3fr;
+
+            background-color: #034f84;
+            padding: 20px;
+        }
+
+        .item {
+            background-color: #f7786b;
+            padding: 20px;
+            margin: 20px;
+            color: #fff;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+        <div class="item">item 4</div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Minmax Auto-fill Auto-fit</title>
+    <style>
+
+        .container {
+            display: grid;
+            
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-template-columns: repeat(3, 20%);
+            grid-template-rows: repeat(2, 20%);
+            gap: 10px;
+            height: 600px;
+            background-color: yellowgreen;
+
+            /* YATAYDA HİZLAMA:  */
+            /* stretch default değer*/
+            /* justify-items: stretch; */
+
+            /* divin içinde içeriği kadar yer kaplar ve ortalanır */
+            /* justify-items: center; */
+
+            /* justify-items: start; */
+            /* justify-items: end; */
+
+
+
+            /* DİKEYDE HİZALAMA: */
+            /* stretch default değer*/
+            /* align-items: stretch; */
+
+            /* divin içinde içeriği kadar yer kaplar ve ortalanır */
+            /* align-items: center; */
+
+            /* align-items: start; */
+            /* align-items: end; */
+
+
+            /* CONTAINER OLARAK HAREKET */
+            /* justify-content: end; */
+            /* justify-content: start; */
+            justify-content: center;
+
+            /* align-content: flex-start; */
+            /* align-content: flex-end; */
+            align-content: center;
+        }
+
+        .item {
+            background-color: #f7786b;
+            color: #fff;
+            font-size: 25px;
+        }
+
+        .item:first-child {
+            /* tek bir eleman için */
+            align-self: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item">box 1</div>
+        <div class="item">box 2</div>
+        <div class="item">box 3</div>
+        <div class="item">box 4</div>
+        <div class="item">box 5</div>
+        <div class="item">box 6</div>
+    </div>
+
+</body>
+</html>
