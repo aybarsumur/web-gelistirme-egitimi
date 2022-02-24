@@ -12,9 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Varela+Round&display=swap" rel="stylesheet">
     <!-- Css -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- max-width 768 pixele gelene kadar bu cssi kullan -->
+    <link rel="stylesheet" media="screen and (max-width: 768px" href="./css/mobile.css">
     <title>News Site</title>
 </head>
 <body>
+    <!-- navbar -->
     <nav id="main-nav" class="nav">
         <div class="container">
             <img src="./img/logo.png" alt="" class="logo">
@@ -32,6 +35,118 @@
             </div>
         </div>
     </nav>
+
+    <!-- header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-container">
+                <div class="header-content">
+                    <div class="category bg-secondary">Sports</div>
+                    <h1>World Rowing Race</h1>
+                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus sed debitis dignissimos illum quae. Quibusdam ullam culpa corrupti repellat doloribus deleniti tempore sint, inventore facere, veritatis ratione dolor unde! Vitae.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- articles -->
+    <section id="main-articles" class="py-2">
+        <div class="container">
+            <h2>Latest News</h2>
+            <div class="articles-container">
+                <article class="card">
+                    <img src="./img/img-1.webp" alt="">
+                    <div>
+                        <div class="category bg-secondary">Sport</div>
+                        <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, omnis perspiciatis at iste ipsum fuga.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="./img/img-2.webp" alt="">
+                    <div>
+                        <div class="category bg-info">Economy</div>
+                        <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, omnis perspiciatis at iste ipsum fuga.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="./img/img-3.webp" alt="">
+                    <div>
+                        <div class="category bg-warning">Health</div>
+                        <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, omnis perspiciatis at iste ipsum fuga.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="./img/img-2.webp" alt="">
+                    <div>
+                        <div class="category bg-info">Economy</div>
+                        <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, omnis perspiciatis at iste ipsum fuga.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="./img/img-3.webp" alt="">
+                    <div>
+                        <div class="category bg-warning">Health</div>
+                        <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, omnis perspiciatis at iste ipsum fuga.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="./img/img-1.webp" alt="">
+                    <div>
+                        <div class="category bg-secondary">Sport</div>
+                        <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, omnis perspiciatis at iste ipsum fuga.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="main-footer" class="py-2">
+        <div class="container footer-container">
+            <div>
+                <img src="img/logo.png" alt=""></img>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti consequatur iusto ipsa fugiat quos molestias voluptatibus vero nesciunt hic sapiente.
+                </p>
+            </div>
+            <div>
+                <h3>Join Us</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, voluptatum?</p>
+                <form action="">
+                    <input type="email" name="" id="" placeholder="Enter Email">
+                    <input type="submit" value="Subscribe" class="btn btn-primary">
+                </form>
+            </div>
+            <div>
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="">Help & Support</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <div>
+                    <a href=""><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href=""><i class="fab fa-youtube fa-2x"></i></a>
+                </div>
+            </div>
+            <div>
+                <p>Copyright &copy; 2024, All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
     
 </body>
 </html>
