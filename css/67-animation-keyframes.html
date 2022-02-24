@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Keyframes</title>
+    <style>
+        body {
+            background-color: #333;
+            
+        }
+
+        .box {
+            background-color: yellow;
+            border-top: 10px solid #fff;
+            width: 150px;
+            height: 150px;
+
+            /* konumunu seçmek için */
+            position: relative;
+            top: 0;
+            left: 0;
+
+            animation: a1 5s forwards ease-in;
+        }
+
+        @keyframes a1 {
+            /* from {
+                top: 100px;
+                left: 100px;
+            }
+            to {
+                top: 300px;
+                left: 300px;
+            } */
+
+            /* Yukarı gibi kullanmak yerine başlangıç noktasını box içinde verip(yada 0% de), aynı breakpoint planlıyor gibi burada 25% 50% 75% 100% de de neler yapması gerektiğini söyleyebilirsin. */
+            /* 0% {
+                top: 0;
+                left: 0;
+            } */
+
+            25% {
+                top: 200px;
+                left: 200px;
+                background-color: aquamarine;
+            }
+
+            50% {
+                top: 400px;
+                left: 300px;
+                background-color: tomato;
+
+            }
+
+            75% {
+                top: 200px;
+                left: 650px;
+            }
+
+            85% {
+                top: 400px;
+                left: 850px;
+                background-color: blue;
+            }
+
+            100% {
+                top: 600px;
+                left: 750px;
+            }
+        }
+
+        h1 {
+            color: #fff;
+            position: relative;
+            animation: text_animation 2s forwards ease-in;
+        }
+
+        @keyframes text_animation {
+            from{
+                left: -300px;
+            }
+            to {
+                left: 100px;
+            }
+        }
+
+        /* 
+        Tabi bunlar için daha önceden hazırlanmış animate kütüphaneler var.
+        https://animate.style/
+        */
+       
+    </style>
+</head>
+<body>
+    <h1>Lorem, ipsum dolor.</h1>
+    <div class="box"></div>
+
+</body>
+</html>

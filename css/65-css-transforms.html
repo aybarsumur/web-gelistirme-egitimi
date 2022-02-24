@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Transforms</title>
+    <style>
+        body {
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* 
+        Transform;
+        Nesnelere hareketlilik kazandıran bir özellik
+        */
+
+        .box {
+            background-color: yellow;
+            border-top: 10px solid #fff;
+            width: 150px;
+            height: 150px;
+
+            transition: all 1s ease-in-out;
+        }
+
+        .box:hover {
+
+            /* eğilme */
+            /* transform: skew(30deg); */
+            
+            /* boyutunun büyümesi */
+            /* transform: scale(2); */
+
+            /* nesnenin kaydırılması x ve y ekseninde */
+            /* transform: translateX(100px); */
+            /* transform: translateY(-100px); */
+            /* transform: translate(-100px, 50px); */
+
+            /* x derece döndür */
+            /* transform: rotate(180deg); */
+            /* transform: rotate(45deg); */
+            /* transform: rotate(-45deg); */
+            transform: rotateX(180deg);
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>

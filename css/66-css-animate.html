@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Animate</title>
+    <style>
+        body {
+            background-color: #333;
+            
+        }
+
+        /* 
+        Transform;
+        Nesnelere hareketlilik kazandıran bir özellik
+        */
+
+        .box {
+            background-color: yellow;
+            border-top: 10px solid #fff;
+            width: 150px;
+            height: 150px;
+
+            /* hangi elemanti anime edeceksek onda bunu tanıtıyoruz.Böylelikle a1 animasyonu box ile ilişkilenmiş oldu*/
+            /* animation-name: a1; */
+
+            /* animasyonun süresi */
+            /* animation-duration: 5s; */
+
+            /* animasyonun tekrar sayısı */
+            /* animation-iteration-count: 2; */
+            /* animation-iteration-count: infinite; */
+
+            /* bittikten sonra ne yapsın. forwards: son noktasında kalır,  */
+            /* animation-fill-mode: forwards; */
+
+            /* erteleme */
+            /* animation-delay: 2s; */
+
+            /* animasyonun son halinden çalışır.yani sondan başlar*/
+            /* animation-direction: alternate-reverse; */
+
+            /* yavaş başla sonra hızlan */
+            /* animation-timing-function: ease-in; */
+
+
+            /* tabi bunların hepsini bir özellik çatısında toplayabiliriz.
+            animation: keyframe ismi, duration, fill-mode, delay, timing-function; şeklinde*/
+            animation: a1 5s forwards 2s ease-in;
+        }
+
+        /* 
+        Öncelikle animasyon için bir keyframes oluşturup bir ad veriyoruz.
+        Animasyonun hangi aşamada hangi süreçte ne değerler alacağını burada tanımlıyoruz
+        */
+        @keyframes a1 {
+            to {
+                width: 500px;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>

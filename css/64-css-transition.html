@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Transition</title>
+    <style>
+        body {
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* 
+        Transition;
+        Bu özellik, her özellik için kullanılamaz. Bunu vermek istediğimiz özelliğin belli bir süre içinde değiştirilmesi gerekir. hover vs gibi
+        */
+
+        .box {
+            background-color: yellow;
+            width: 150px;
+            height: 150px;
+
+            /* 
+            hangi propertyi değiştirmek istedğimizi söylüyoruz 
+            https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties
+            */
+            /* transition-property: background-color; */
+            /* 2sn içinde dönüşüm gerçekleşsin diyoruz */
+            /* transition-duration: 2s; */
+            /* 
+            fonksiyonlar; yavaş başla sonra hızla, hılı başla sonra yavaşla vb.
+            https://www.w3schools.com/css/css3_transitions.asp
+            */
+            /* transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+            /* transition-timing-function: ease-in-out; */
+            /* transition-timing-function: ease-in; */
+
+            /* tabi yukarıdaki üç özelliği tek bir satırda yazmak mümkün */
+            /* transition: background-color 2s ease-in-out; */
+
+            /* Eğer aynı anda birden çok özellikte değişim istiyorsak */
+            /* transition: background-color 2s, border-radius 4s ease-in-out; */
+            /* Yanda özellikleri tek tek yazmadan all diyebiliriz */
+            transition: all 4s ease-in-out;
+
+        }
+
+        .box:hover {
+            background-color: red;
+            border-radius: 50%;
+            border: 5px solid white;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>
