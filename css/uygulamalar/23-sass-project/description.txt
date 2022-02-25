@@ -1,0 +1,31 @@
+NODE SASS COMPILER (Transpiler) KURULUM
+
+node --version      => node versiyon kontrolü
+npm --version       => npm versiyon kontrolü
+npm init --yes      => Projeye package.json dosyası kurulumu
+npm i node-sass     => node projeye yüklenir. Eğer bu şekilde son versiyon yüklemesinde sorun çıkarsa sonuna 
+                       7.0.1 gibi versiyon ismi girerek de işlem yapabilirsin.
+npm install         => node_modules klasörü büyük olduğu için bazen silinmesi istenebilir. Bu durumda bu kod 
+                       ile klasörü tekrar projeye kurulumu yapabilirsin.
+
+Sonrasında package.json dosyası içinde script satırının düzenlenmesi gerekir.
+"script": {
+    "sass": "node-sass -w sass -o css"
+}
+Bu satırda, sass        => senin scripte verdiğin ismi
+            node-sass   => hangi compiler ile yapılacağı
+            -w          => watch komutu
+            sass        => izlenecek klasör ( bu klasör içinde main.scss dosyası oluştur )
+            -o          => output komutu
+            css         => çıktının klasörü ( bu klasör içinde main.css dosyası oluştur )
+NOT: sass ve css klasörlerinin konumları dikkat edilmeli, başka kalsörler içindeyse ona göre yazılmalı (ör. public/css gibi)
+Artık, main.scss dosyası içine yazılacak tüm scss komutları node-sass ile dönüştürülüp main.css dosyasına yazılacak
+Tabi bunun için yapman gereken son şey, package.json içindeki script satırının çalışıyor olması lazım. Bunun için;
+npm run sass        => sass burada senin scripte verdiğin isim 
+
+Bundan sonra oluşturacağın index.html içinde css dosyasını link ile dosyana bağlaman. Hepsi bu :)
+
+Ayriyeten;
+package.json a yeni bir dependence yüklemek istiyorsan; Ör. Owl-Carousel
+npm i owl-carousel@2.3.4
+@2.3.4 ksımını yazmaz isen en güncel versiyonunu yüksel. yazarsan o versiyonu
