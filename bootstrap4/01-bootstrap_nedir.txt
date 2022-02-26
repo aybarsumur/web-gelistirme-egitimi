@@ -1,0 +1,772 @@
+*** Bootstrap Kurulum *** 
+
+Bootstrap css ve javascript dosyalarını head kısmı içine eklememiz gerekiyor. Bunun için 2 tane yolumuz var. 
+1.) Cdn sitelerinden kütüphane linklerini kullanarak. 
+2.) getbootstrap.com’ dan kütüphane dosyalarını indirerek. 
+Kütüphane dosyalarını için https://getbootstrap.com/
+
+
+*** Renkler ***
+
+1.) .*-primary
+2.) .*-success
+3.) .*-info
+4.) .*-warning
+5.) .*-danger
+6.) .*-secondary
+7.) .*-dark
+8.) .*-light.
+9.) .*-white
+10.) .*-body
+
+** Eğer yazı için kullanıyorsak renk isimlerinin başına .text gelmelidir.
+** Eğer arkaplan için kullanıyorsak renk isimlerinin başına .bg gelmelidir.
+** Eğer buton için kullanıyorsak renk isimlerinin başına .btn gelmelidir.
+** Eğer border rengi için kullanıyorsak renk isimlerinin başına .border gelmelidir.
+
+<p class="text-primary">This text is important.</p>
+<p class="bg-primary text-white">This text is important.</p>
+<button type="button" class="btn btn-primary">Primary</button>
+
+
+
+*** <h1> … <h6> *** 
+
+Bootstrap css dosyasını eklediğimiz sayfalarda h etiketleri için bazı css kodları eklenmiştir. 
+1 rem değeri 16px değerine karşılık gelirken her bir h etiketi için verilmiş rem değerleri aşağıdadır. 
+h1: 2.5rem, h2: 2rem, h3: 1.75rem, h4: 1.5rem, h5: 1.25rem, h6: 1rem 
+** Bazen h etiketlerine uygulanmış css kodlarını başka etiketler için kullanmak isteyebiliriz. Bunun için .h1, .h2, .h3, .h4, .h5, .h6 isimlerinde sınıf isimleri mevcuttur. 
+
+<h1> Heading </h1> 
+<p class=”h1”> Heading </p>
+
+
+
+*** Display ***
+
+Eğer h etiketlerine uygulanmış olan font büyüklükleri yeterli gelmezse display sınıflarını kullanabiliriz.
+Genelde header kısmında kullanılan arka plan resminin üstüne getirilen yazılar için kullanılır.
+.display-1, .display-2, .display-3, .display-4
+
+<h1 class="display-1">Display 1</h1>
+<h1 class="display-2">Display 2</h1>
+<h1 class="display-3">Display 3</h1>
+<h1 class="display-4">Display 4</h1>
+
+
+
+
+*** Buttons ***
+
+Bir button ya da a etiketini daha güzel bir görünüme getirmek için .btn ve .btn-* sınıflarını kullanmalıyız. 
+** Farklı renk sınıflarını kullanabiliriz. Örneğin; btn-warning, btn-danger 
+** Outline butonu oluşturmak için .btn-outline-primary şeklinde kullanım yapmalıyız. 
+** Küçük bir buton için .btn-sm, büyük bir buton için ise .btn-large sınıfını kullanmalıyız. 
+** Satırı olduğu gibi kaplayan block bir buton oluşturmak için .btn-block sınıfını eklemeliyiz. 
+** butonlar için .active ve .disabled sınıflarını kullanabiliriz. 
+
+<button type="button" class="btn btn-primary">Primary</button> 
+<a href="#" class="btn btn-info">Link Button</a> 
+<a href="#" class="btn btn-warning btn-lg">Large Button</a>
+
+
+
+*** Margin ve Padding ***
+
+** Margin için m, padding için p sınıflarını kullanıyoruz. Sadece m ya da sadece p sınıfı ile 4 köşeden margin ya da padding uygulamış oluruz.
+
+** Margin ve padding için kullanabileceğimiz köşeleri temsil eden sınıflar
+t - margin-top veya padding-top
+b -margin-bottom veya padding-bottom
+l - margin-left veya padding-left
+r - margin-right veya padding-right
+x - padding-left and padding-right yada margin-left and margin-right
+y - padding-top and padding-bottom veya margin-top and margin-bottom
+
+** margin ve padding için uygulanacak ölçüler için aşağıdaki ölçülendirme tiplerini kullanıyoruz.
+0 - margin yada padding 0 olur.
+1 - margin yada padding .25rem (4px)
+2 - sets margin yada padding .5rem (8px)
+3 - sets margin yada padding 1rem (16px)
+4 - sets margin yada padding 1.5rem (24px)
+5 - sets margin yada padding 3rem (48px)
+
+** mx-auto ile genişlik verilmiş bir block elemanı yatayda ortalamış oluruz.
+
+<div class="pt-4"> Üst taraftan 24px’ lik padding </div>
+<div class="p-5"> 4 köşeden 48px’ lik padding </div>
+<div class="m-5 pb-5">Her köşeden 48px’ lik bir margin ile alt köşeden 48’ px lik bir padding uygulandı.</div>
+
+
+
+*** Border ***
+
+** Eğer bir kutuya .border sınıfını verirsek 4 köşeden border eklemiş oluruz. 
+** Eğer bir kutuya 3 köşeden bir border vermek istersek önce .border sınıfı ile 4 köşeden border ekleriz ve daha sonra istemediğimiz köşeden sileriz. Örneğin border-top-0 şeklinde üst köşedeki border ’ı sileriz. 
+** Border için rengi .border-primary şeklinde verebiliriz. 
+** Kenarlıkları yuvarlatmak için (border radius) .rounded sınıfını kullanıyoruz. 
+** .rounded ile 4 köşeden, 
+** .rounded-top ile üst köşelerden 
+** .rounded-circle ile tam yuvarlak bir şekil, 
+** .rounded-0 ile yuvarlatmayı silebiliriz. 
+
+<span class="border"></span> 
+<span class="border border-0"></span> 
+<span class="border border-top-0"></span> 
+
+<span class="border border-primary"></span> 
+<span class="border border-secondary"></span> 
+<span class="border border-success"></span> 
+
+<span class="rounded"></span> 
+<span class="rounded-right"></span> 
+<span class="rounded-circle"></span> 
+<span class="rounded-0"></span>
+
+
+
+*** Sizing ***
+
+Block ya da inline-block bir eleman için kullanabileceğimiz genişlik sınıfları .w-25, .w-50, .w-75, .w-100, .mw-100 şeklindedir.
+Block ya da inline-block bir eleman için kullanabileceğimiz yükseklik sınıfları .h-25, .h-50, .h-75, .h-100, .mh-100 şeklindedir.
+
+<div class="w-25 bg-warning">Width 25%</div>
+<div class="w-50 bg-warning">Width 50%</div>
+
+<div style="height:200px;background-color:#ddd">
+    <div class="h-25 bg-warning">Height 25%</div>
+    <div class="mh-100 bg-warning" style="height:500px">
+        Max Height 100%
+    </div>
+</div>
+
+
+
+*** Text ***
+
+Align Bir block etiket içindeki yazıları hizalamak için .text-right (sağ), .text-left (sol), .text-center (ortaya) ve .text-justify (iki yana eşit) sınıflarını kullanırız. 
+** Bir block etiket içindeki (div) inline elemanlarıda hizalama sınıfları ile hizalandırabiliriz. Örneğin tüm linkleri ortalamak gibi. 
+
+<p class=”text-right”> lorem ipsum. 
+</p> <p class=”text-center”> lorem ipsum. 
+</p> <p class=”text-justify”> lorem ipsum. </p>
+
+
+
+*** Display ***
+
+Tarayıcılar etiketlere varsayılan bir display özelliği atarlar. Örneğin span etiketi display:inline; iken, div etiketi ise display:block özelliğine sahip bir etikettir.
+Ancak biz bu özellikleri değiştirebiliriz.
+d-inline => inline etikete çevrilir.
+d-block => block etikete çevrilir.
+d-inline-block => inline block etikete çevrilir.
+d-none => Etiket görünmez olur.
+
+<span class="d-block bg-danger mb-2">d-block</span>
+<div class="d-inline bg-warning">d-inline</div>
+<div class="d-inline-block bg-primary">
+    <h3>Product Name</h3>
+    Description
+</div>
+
+
+
+*** Table ***
+
+.table sınıfı ile tabloya bir padding ve yatay çizgiler eklemiş oluruz. 
+.table-striped ile her satırın arka planı gri-beyaz şeklinde oluşturulur. 
+.table-bordered ile hücrelere kenarlık eklenir. 
+.table-hover, hover olayı ile her satır üzerindeyken arka plan farklılaşır. 
+.table-* ile farklı renkte tablo oluşturabiliriz. Örneğin; .table-dark, .table-primary 
+.bg-* şeklinde arkaplan renklerini tablolar için kullanabiliriz. 
+.table-sm ile padding değeri düşük olan küçük bir tablo oluşur. 
+.table-responsive sınıfına sahip bir div içine aldığımız tablo responsive olur. 
+
+<table class="table table-dark table-striped"> ... </table> 
+
+
+
+*** List ***
+
+.list-unstyled sınıfına sahip bir listenin (ul) soldan padding değeri 0 ve liste işareti silinmiş olur.
+.list-inline sınıfına sahip bir ul içindeki her bir li elemanına .list-inline-item sınıfını eklersek listemiz inline bir liste olur yani her elemanı yan yana gelir.
+
+<ul class="list-unstyled">
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+</ul>
+
+<ul class="list-inline ">
+    <li class=”list-inline-item”>Lorem ipsum dolor sit amet.</li>
+    <li class=”list-inline-item”>Lorem ipsum dolor sit amet.</li>
+</ul>
+
+
+
+*** List Group ***
+
+.list-group sınıfını kapsayıcı etikete verip her bir alt elemana ise .list-group-item demeliyiz. Her bir liste elemanın linke çevirmek için ekleyeceğimiz a etiketi için .list-group-item-action sınıfını kullanmalıyız. 
+** Bir elemanın arka planını mavi renge getirmek için .active sınıfını kullanabiliriz. 
+** Listenin dış çerçevesindeki kenarlıkları kaldırmak için .list-group-flush sınıfını kullanırız. 
+** Liste elemanlarının arka planını farklı renge getirmek için .list-group-item-primary şeklinde sınıf isimlerini kullanmalıyız. 
+
+<ul class="list-group w-25"> 
+    <li class="list-group-item active">Lorem ipsum dolor.</li> 
+    <li class="list-group-item">Lorem ipsum dolor.</li> 
+</ul> 
+
+<div class="list-group"> 
+    <a href="" class="list-group-item list-group-item-action active"></a> 
+    <a href="" class="list-group-item list-group-item-action"></a> 
+</div>
+
+
+
+*** Alerts ***
+
+Alert kutuları için .alert sınıfı ile birlikte .alert-* şeklinde renk kodları tanımlamalıyız.
+** alert sınıfı içine ekleyeceğimiz a etiketleri için .alert-link sınıfını kullanmalıyız.
+** alert kutusunu kapatabilmek için bir x ikonunu .alert-dismissible sınıfı ile ekleyebiliriz.
+** dismissable bir alert oluşturduğumuzda sayfa ilk yüklendiği anda alert kutusu görünmez olur eğer ki görünür yapmak istiyorsak .show sınıfını eklemeliyiz.
+** alert açılıp ya da kapanırken bir efekt uygulamak için .fade sınıfını kullanmalıyız.
+
+<div class="alert alert-success">
+    <a href="#" class="alert-link">mesajı oku..!</a>.
+</div>
+
+<div class="alert alert-success alert-dismissible">
+    <button type="button" class="close" data- dismiss="alert">&times;</button>
+    mesajı oku..!.
+</div>
+
+
+
+*** Image ***
+
+Resimlerin çerçevelerini farklı css sınıfları ile düzenleyebiliriz. 
+.rounded => köşeler yuvarlatılır. 
+.rounded-circle => köşeler tam yuvarlatılır. Daire şeklinde görüntü alırız. 
+.img-thumbnail => resmin etrafına çerçeve eklenir. 
+.img-fluid => responsive bir resim oluşturulur. Eklenen css kodları; max-width: 100% ve height:auto; 
+
+<img src="img/2.jpeg" alt="" class="rounded"> 
+<img src="img/3.jpeg" alt="" class="rounded-circle"> 
+<img src="img/4.jpeg" alt="" class="img-thumbnail"> 
+<img src="img/5.jpeg" alt="" class="img-fluid"> 
+
+
+
+*** Float ***
+
+Css floating için oluşturulmuş sınıflar .float-left, .float-right ve .float-none şeklindedir.
+.float-left => sola hizalanır.
+.float-right => sağa hizalanır.
+.float-none => hizalama yapılmaz.
+** float uygulandıktan sonra clear işlemi için .clearfix sınıfını kullanabiliriz.
+
+<div class="clearfix">
+    <span class="float-left">Float left</span>
+    <span class="float-right">Float right</span>
+</div>
+
+
+
+*** Form ***
+
+<input>, <textarea>,<select> kutuları için .form-control sınıfını kullanarak satırı olduğu gibi kaplayan ve padding uygulanmış daha güzel görünüm elde edebiliyoruz. 
+** bir input kontrolü ve label ‘i barındıran bir div etiketine sınıf olarak .form-group dediğimizde elemanları gruplayarak uygun bir margin değeri vermiş oluyoruz. 
+** kontrolleri büyüklük olarak .form-control-sm or .form-control-lg sınıfları ile ayarlayabiliriz. 
+
+<input type="text" class="form-control"> 
+
+<div class="form-group"> 
+    <label for="usr">Name:</label> 
+    <input type="text" class="form-control" id="usr"> 
+</div>
+
+
+
+*** Input Groups ***
+
+Bir input kontrolünün başına ya da sonuna bir icon ya da bir text eklemek istediğimizde kullanıyoruz.
+** Eklemek istediğimiz eleman ile input kontrolünü .form-group içine almalıyız.
+** Eğer eklemek istediğimiz nesneyi input kontrolünün başına ekliyorsak .input-group-prepend sonuna ekliyorsak .input-group-append sınıflarını kullanmalıyız.
+** input-group’ a vereceğimiz .input-group-sm ve .input-group-lg sınıfları ile büyüklük ayarlaması yapabiliriz.
+
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">@</span>
+    </div>
+    <input type="text" class="form-control" placeholder="Username">
+</div>
+
+<div class="input-group">
+    <input type="text" class="form-control" placeholder="Search">
+    <div class="input-group-append">
+        <button class="btn btn-success" type="submit">Go</button>
+    </div>
+</div>
+
+
+
+*** Cards ***
+
+En basitiyle bir card oluşturmak için .card sınıfına sahip bir div içine .card-body sınıfına sahip bir başka div ve içerik eklemeliyiz. 
+** bir card, .card-header, .card-body ve .card-footer kısımlarından oluştur ve istediğimiz bölümleri kullanabiliriz. ** .bg-* sınıflarını kullanarak card’ lara renk verebiliriz. 
+** .card-body içerisinde kullanabileceğimiz bazı bölümler vardır bunlar; .cart-title, .card-text, .card-link sınıflarıdır. 
+** card içine bir resim ekleyebiliriz. Resim üste eklenecekse .card-img-top alta eklenecekse .card-img-bottom sınıfları kullanılıyor. 
+
+<div class="card"> 
+    <div class="card-body">Basic card</div> 
+</div> 
+
+<div class="card"> 
+    <div class="card-header">Header</div> 
+    <div class="card-body">Content</div> 
+    <div class="card-footer">Footer</div> 
+</div>
+
+<div class="card"> 
+    <img class="card-img-top" src="img_avatar1.png" alt="Card image"> 
+    <div class="card-body"> 
+        <h4 class="card-title">Card title</h4> 
+        <p class="card-text">Some example text. Some example text.</p> 
+        <a href="#" class="card-link">Card link</a> 
+        <a href="#" class="card-link">Another link</a> 
+    </div> 
+</div>
+
+
+
+*** Card Colums ***
+
+Yüksekliği farklı olan ve yan yana gelen card’ lar için card-colums yapısı kullanılabilir.
+** Burada önemli olan her bir card’ in yüksekliğinin birbirinden farklı olmasıdır.
+
+<div class="card-columns">
+    <div class="card bg-primary">
+        <div class="card-body text-center">
+            <p class="card-text">Some text inside the first card</p>
+        </div>
+    </div>
+    <div class="card bg-warning">
+        <div class="card-body text-center">
+            <p class="card-text">Some text inside the second card</p>
+        </div>
+    </div>
+</div>
+
+
+
+*** Card Deck ***
+
+İçerik olarak farklı yükseklikte olsalar bile gene de her bir card’ in yüksekliği birbirinin aynısı olacaktır. 
+
+<div class="card-deck"> 
+    <div class="card bg-primary"> 
+        <div class="card-body text-center"> 
+            <p class="card-text">Some text inside the first card</p> 
+        </div> 
+    </div> 
+    <div class="card bg-warning"> 
+        <div class="card-body text-center"> 
+            <p class="card-text">Some text inside the second card</p> 
+        </div> 
+    </div> 
+</div>
+
+
+
+*** Card Group ***
+
+Card Deck ile aynı görüntüyü elde ederiz ancak her bir elemanın arasında margin olmaz.
+
+<div class="card-group">
+    <div class="card bg-primary">
+        <div class="card-body text-center">
+            <p class="card-text">Some text inside the first card</p>
+        </div>
+    </div>
+    <div class="card bg-warning">
+        <div class="card-body text-center">
+            <p class="card-text">Some text inside the second card</p>
+        </div>
+    </div>
+</div>
+
+
+
+*** Jumbotron ***
+
+Bir zemin üzerine site başlığı ve açıklaması yazmak istediğimizde jumbotron’ u kullanabiliriz. 
+** jumbotron ‘un içerikleri uyguladığı padding değerleri vardır ancak içerikleri responsive olarak ortalamak istersek .container sınıfını kullanabiliriz. 
+** .jumbotron-fluid sınıfı ile satırı olduğu gibi kaplayan bir zemin elde edebiliriz. 
+** .jumbotron varsayılan olarak gri bir arka plan rengi kullanır ve biz bu rengi değiştirebiliriz hatta bir arka plan resmi de kullanabiliriz. 
+
+<div class="jumbotron"> 
+    <h1>Bootstrap Tutorial</h1> 
+    <p>Bootstrap is the most popular HTML, CSS...</p> 
+</div> 
+
+<div class="jumbotron jumbotron-fluid "> 
+    <div class="container">
+        <h1>Bootstrap Tutorial</h1> 
+        <p>Bootstrap is the most popular HTML, CSS...</p> 
+    </div> 
+</div>
+
+
+
+*** Breadcrumb ***
+
+Kullanıcıları alt ya da üst sayfaya yönlendirmek için breadcrumb yapıları kullanılır.
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Telefonlar</a></li>
+        <li class="breadcrumb-item active">Samsung</li>
+    </ol>
+</nav>
+
+
+
+*** Dropdown ***
+
+**Button ve menü kısmını .dropdown sınıfına sahip bir div içine almalıyız. 
+**Button için .dropdown-toggle sınıfını ve data-toggle=”dropdown” özelliğini eklemeliyiz. 
+
+<div class="dropdown"> 
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> 
+        Dropdown button 
+    </button>
+    <div class="dropdown-menu"> 
+        <a class="dropdown-item" href="#">Link 1</a> 
+        <a class="dropdown-item" href="#">Link 2</a> 
+        <a class="dropdown-item" href="#">Link 3</a> 
+    </div> 
+</div> 
+
+
+
+*** Navbar ***
+
+** nav etiketi için .navbar sınıfını eklemeliyiz.
+** navbar-expand-sm sınıfını sm cihaz çözünürlüğü ve üstündeki çözünürlüklerde linkler yan yana gelsin diye kullanıyoruz.
+Aynı şekilde linklerin yan yana gelmesini daha büyük çözünürlüklerde aktif etmek istiyorsak sırasıyla md, lg, xl sınıflarını kullanabiliriz. Ancak linklerin sm ve üstünde yan yana olması en doğru görüntüyü veriyor. sm ‘nin altında yani xs çözünürlüğünde ise linkler alt alta gelir.
+** bg-light gri bir arka zemin rengi verir. Aynı şekilde diğer renk isimlerini kullanabiliriz.
+** Koyu renkli navbar üzerine beyaz yazı yazmak için .navbar-dark sınıfını eklemeliyiz.
+** Açık renkli navbar üzerine siyah yazı yazmak için ise .navbar-light sınıfını eklemeliyiz.
+
+<nav class="navbar navbar-expand-sm bg-light">
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 3</a>
+        </li>
+    </ul>
+</nav>
+
+
+
+*** Collapsable Navbar ***
+
+.navbar-expand-sm dediğimizde ve tarayıcımız mobil çözünürlüğüne geldiğinde linkler alta gelecektir. Bu durumda alt alta gelen linkleri başlangıçta görünmez yapıp bir buton ile açıp kapayabiliriz. 
+Button için .navbar-toggler sınıfı, data-toggle="collapse" ve data-target="#collapsibleNavbar” özelliklerini eklemeliyiz. 
+** data-toggle="collapse" ile collapse görevini veriyoruz. 
+** data-target="#collapsibleNavbar” ile button tıklandığında gösterilecek içeriğin belirtilmesi. 
+
+Açılacak olan liste için, 
+**.collapse navbar-collapse sınıfına sahip bir div elemanı oluşturuyoruz. 
+** div için bir id bilgisi veriyoruz ve bu bilgi button’ un data-target kısmında kullanılıyor. 
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark"> 
+    <a class="navbar-brand" href="#">Navbar</a> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> 
+        <span class="navbar-toggler-icon"></span> 
+    </button> 
+    <div class="collapse navbar-collapse" id="collapsibleNavbar"> 
+        <ul class="navbar-nav"> 
+            … 
+        </ul> 
+    </div> 
+</nav>
+
+
+
+*** Collapsable ***
+
+Bir buton ya da link ile bir içeriği ilişkilendirip içeriği açıp kapatabiliriz.
+** Button’ a collapse özelliği kazandırmak için data-toggle="collapse" özelliğini ekliyoruz.
+** Açılacak içeriğe button ile ilişkilendirmek için ise data-target="#demo" özelliğini kullanıyoruz.
+
+<button data-toggle="collapse" data-target="#demo">
+    Aç/Kapa
+</button>
+
+<div id="demo" class="collapse">
+    Gösterilecek / Gizlenecek içerik
+</div>
+
+
+
+
+*** Carousel ***
+
+Bir resim slider’ ı yapmak istediğimizde Carousel eklentisini kullanabiliriz. 
+** Bir slider için kapsayıcı eleman aşağıdaki gibi olmalıdır. 
+
+<div id="demo" class="carousel slide" data-ride="carousel"> 
+    <div class="carousel-inner"> 
+    </div> 
+</div> 
+
+** Ekleyeceğiniz her bir resim .carousel-inner sınıfına sahip div içine gelmelidir. 
+** Her bir resim için .carousel-item isminde bir div içine resim eklemeliyiz. 
+** Slider ilk çalıştığında açılmasını istediğimiz slider için .active sınıfı eklenmelidir. 
+
+<div id="demo" class="carousel slide" data-ride="carousel"> 
+    <div class="carousel-inner"> 
+        <div class="carousel-item active"> 
+            <img src="la.jpg" alt="Los Angeles" width="1100" height="500"> 
+        </div> 
+        <div class="carousel-item"> 
+            <img src="chicago.jpg" alt="Chicago" width="1100" height="500"> 
+        </div> 
+        <div class="carousel-item"> 
+            <img src="ny.jpg" alt="New York" width="1100" height="500"> 
+        </div> 
+    </div> 
+</div>
+
+
+
+*** Carousel Indicators ***
+
+Resim geçişleri yapabilmek için resim üzerine ekleyeceğimiz yönlendirme çizgilerini temsil eder.
+** .caroseul-item div’i ile aynı seviyeye eklenmelidir.
+** her bir çizgi li etiketi ile temsil edilir.
+
+<ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+</ul>
+
+
+
+*** Carousel Controls ***
+
+Resim geçişleri yapabilmek için resim sağ ve soluna ekleyeceğimiz yönlendirme ikonlarını temsil eder. 
+** .caroseul-item div’i ile aynı seviyede en alta eklenmelidir. 
+
+<a class="carousel-control-prev" href="#demo" data-slide="prev"> 
+    <span class="carousel-control-prev-icon"></span> 
+</a> 
+<a class="carousel-control-next" href="#demo" data-slide="next"> 
+    <span class="carousel-control-next-icon"></span> 
+</a>
+
+
+
+*** Carousel Captions ***
+
+Her bir resim üstüne gelecek olan başlık ve açıklama kısımlarını temsil eder.
+
+<div class="carousel-item">
+    <img src="la.jpg" alt="Los Angeles">
+    <div class="carousel-caption">
+        <h3>Los Angeles</h3>
+        <p>We had such a great time in LA!</p>
+    </div>
+</div>
+
+
+
+*** Modal ***
+
+Başlangıçta gösterilmeyen bir içeriği bir butona tıklanma durumunda bir açılır bir pencerede göstermeyi sağlayan bir yapıdır. 
+** bir butona data-toggle=”modal” özelliğini veriyoruz. 
+** data-target ile ilişkilendirilecek içeriğinin id bilgisini veriyoruz. 
+** Modal kutusunun içeriğini istediğiniz gibi düzenleyebilirsiniz. 
+** Modal kutusunu aynen bir card gibi hazırlayabilirsiniz. Modal-header, model-body ve model-footer bölümlerinde oluşur ve istediğiniz bölümü kullanabilirsiniz. 
+**data-dismiss özelliğine sahip bir buton ya da icon ile açılmış modal’i kapatabilirsiniz. 
+
+<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> 
+
+** .fade sınıfı ile kutu açılıp kapanırken bir transition efektine sahi olur. 
+** modal kutusunun boyutlarını .modal-sm ve .modal-lg ile değiştirebilirsiniz. 
+** modal kutusunu dikeyde ortalamak için .modal-dialog-centered sınıfını kullanabilirsiniz. 
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> 
+    Open modal 
+</button>
+
+<!-- The Modal --> 
+<div class="modal" id="myModal"> 
+    <div class="modal-dialog"> 
+        <div class="modal-content"> 
+
+        <!-- Modal Header --> 
+        <div class="modal-header"> 
+        </div> 
+
+        <!-- Modal body --> 
+        <div class="modal-body"> 
+        </div> 
+
+        <!-- Modal footer --> 
+
+        </div> 
+        </div> 
+    </div> 
+</div>
+
+
+
+*** Tooltip ***
+
+Bir nesne üzerine geldiğimizde açıklayıcı bir mesaj kutusunu tooltip ile çıkarabiliriz.
+** tooltip eklenecek nesneye data-toggle=”tooltip” eklemeliyiz.
+** mesaj olarak gösterilecek içerik title özelliğine eklenmelidir.
+** tooltip’i aktif etmek için mutlaka jquery kodu yazmalıyız. Jquery kütüphanesinin altında olmalıdır.
+** data-placement özelliğine top, left, right ve bottom özelliğini verirek tooltip konumunu belirtiyoruz.
+** data-html="true" özelliği ile title içeriğine bir html içeriği ekleyebiliyoruz.
+
+<a href="#" data-toggle="tooltip" title="Tooltip text">Hover over me</a>
+
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+
+
+
+*** Popover ***
+
+Tooltip ile yapabildiğimizi popover ile de yapabiliriz fark olarak tıklama ile de mesaj kutusunu aktif edebiliyoruz. ** popover eklenecek nesneye data-toggle=”popover” eklemeliyiz. 
+** title ile mesaj kutusunun başlık kısmını tanımlıyoruz. 
+** data-content ile mesaj kutusunun içerik kısmındaki yazıyı tanımlıyoruz. 
+** Popover aktif etmek için mutlaka jquery kodu yazmalıyız. Jquery kütüphanesinin altında olmalıdır. 
+
+<a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">
+    Toggle popover
+</a> 
+
+<script> 
+    $(document).ready(function(){ 
+        $('[data-toggle="popover"]').popover(); 
+    }); 
+</script>
+
+
+
+*** ScrollSpy ***
+
+Yatay scroll barı (kaydırma çubuğu) hareket ettirdiğimizde görüntülenen içerik ile ilişkili link etiketini aktif hale getirmek için kullanıyoruz.
+** data-spy=”scroll” diyerek body için bir scrollable bölge oluşturuyoruz. Bunun yerine kapsayıcı bir div etiketide kullanılabilir.
+** data-target=”.navbar” ile belirttiğimiz alan içinde denetlenecek olan .navbar sınıfına sahip nesneyi belirtiyoruz.
+** data-offset=”50” ile scroll pozisyonunu 50px aşağıya öteliyoruz.
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar bg-dark navbar-dark fixed-top">
+    <ul class="navbar-nav">
+        <li><a href="#section1">Section 1</a></li>
+        …
+    </nav>
+
+    <!-- Section 1 -->
+    <div id="section1">
+        <h1>Section 1</h1>
+        <p>lorem ipsum!</p>
+    </div>
+</body>
+
+
+
+*** Breakpoints ***
+
+// Small devices (landscape phones, 576px and up) 
+@media (min-width: 576px) { } 
+
+// Medium devices (tablets, 768px and up) 
+@media (min-width: 768px) { } 
+
+// Large devices (desktops, 992px and up) 
+@media (min-width: 992px) { } 
+
+// Extra large devices (large desktops, 1200px and up) 
+@media (min-width: 1200px) { ... } 
+
+
+
+*** Grid ***
+
+** .container sınıfı ile içeriği her bir breakpoint aralığında bir genişlik vermiş oluyoruz ve içerik sağdan soldan eşit boşluklara sahip olur. Aslında yaptığımız örneğin tarayıcı genişliğinin 1200px olduğu durumda içeriği 1000px yapıp kalan 200px’i sağdan soldan 100px olarak dağıtıp ortalamaktır.
+** .container-fluid sınıfı ile içeriği tarayıcının o anki genişliği kadar yapıp (100%) sağdan soldan biraz padding değeri veriyoruz.
+** Her bir satır .row sınıfı ile oluşturulur.
+** Her bir kolon .col sınıfı ile oluşturulur.
+** Her bir satırda en fazla 12 kolon bulunur.
+** Eşit genişlikte kolon oluşturmak için .col sınıfı kullanılır.
+** Farklı genişlikte kolon oluşturmak için .col-* şeklinde sayısal ifade kullanılır. (col-5, col-7)
+** Toplam 12 kolonu geçen blok olduğu gibi alt satıra iner.
+
+<div class=”container”>
+    <div class="row">
+        <div class="col-*"></div>
+        <div class="col-*"></div>
+    </div>
+    <div class="row">
+        <div class="col-*"></div>
+        <div class="col-*"></div>
+        <div class="col-*"></div>
+    </div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+</div>
+
+
+
+*** Responsive ***
+
+Her breakpoint aralığını bir sınıf ismi ile temsil edebiliyoruz. 
+
+ekstra small (576px’ in altında) – bir sınıf ismi yok. 
+small (.sm: 576px – 767px) 
+medium (.md: 768px – 991px) 
+large (.lg: 992px – 1199px) 
+extra large (.xg: 1200px ve üstü) 
+
+** small çözünürlük aralığında responsive olarak bir kolonu col-sm-* şeklinde oluştururuz. sm cihaz aralığı yani 576px’ in altına indiği anda kolonlar satırı olduğu gibi kaplar ve alt alta gelirler. Ancak sm cihaz çözünürlüğü dahil üstündeki tüm çözünürlüklerde yan yana olurlar. 
+** medium cihazlar için col-md-* şeklinde kolon oluştururuz. md cihazın altında eğer ki sm cihaz için bir tanımlama yoksa kolonlar alt alta gelirler. 
+** large cihazlar için col-lg-* şeklinde kolon oluştururuz. lg cihazın altındaki md, sm cihaz için bir tanımlama yoksa kolonlar alt alta gelirler. 
+** extra large cihazlar için col-lg-* şeklinde kolon oluşturuyoruz. xl cihazın altındaki lg, md, sm tanımlaması yoksa kolonlar alta gelirler. 
+** Kolonların hiçbir çözünürlükte alt alta gelmesini istemiyorsanız .col sınıfı ile tanımlama yapmalısınız. 
+
+<div class="row"> 
+    <div class="col-sm-3">.col-sm-3</div> 
+    <div class="col-sm-3">.col-sm-3</div> 
+    <div class="col-sm-3">.col-sm-3</div> 
+    <div class="col-sm-3">.col-sm-3</div> 
+</div> 
+
+<div class="row"> 
+    <div class="col-sm-4">.col-sm-4</div> 
+    <div class="col-sm-8">.col-sm-8</div> 
+</div>
+
+<div class="row"> 
+    <div class="col-md-2">.col-md-2</div> 
+    <div class="col-md-10">.col-md-10</div> 
+</div>
