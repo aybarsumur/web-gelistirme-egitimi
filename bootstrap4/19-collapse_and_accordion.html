@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Collapse & Accordion</title>
+
+  </head>
+
+  <body class="w-75 mx-auto my-4">
+
+      <!-- Collapse : Tıklama ile içeriği gösteriyoruz. Bu içerik varsayılan olarak kapalı gelir. Açık gelmesini istiyorsan show classı ekle-->
+
+      <p>
+        <button class="btn btn-primary" type="button" data-target="#content" data-toggle="collapse">
+          Button
+        </button>
+
+        <a href="#content" class="btn btn-primary"data-toggle="collapse">
+          Link
+        </a>
+      </p>
+      
+      <div id="content" class="collapse show">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto quia debitis dignissimos, tempora magnam quidem illo placeat recusandae quas unde totam aliquam officia quasi quis animi ullam vel id saepe.</p>
+      </div>
+
+      <br><br>
+
+      <!-- Accordion :  -->
+
+      <div id="accordion">
+        <div class="card mb-1">
+          <div class="card-header">
+            <a href="#collapseOne" class="card-link" data-toggle="collapse">Item 1</a>
+          </div>
+          <div id="collapseOne" class="collapse show" data-parent="#accordion">
+            <div class="card-bory">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas magni sapiente aut possimus iste, inventore illo quasi eaque, soluta tenetur repellendus enim. Rerum amet, velit aperiam ad excepturi animi tempora?</p>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-1">
+          <div class="card-header">
+            <a href="#collapseTwo" class="card-link" data-toggle="collapse">Item 2</a>
+          </div>
+          <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-bory">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas magni sapiente aut possimus iste, inventore illo quasi eaque, soluta tenetur repellendus enim. Rerum amet, velit aperiam ad excepturi animi tempora?</p>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-1">
+          <div class="card-header">
+            <a href="#collapseThree" class="card-link" data-toggle="collapse">Item 3</a>
+          </div>
+          <div id="collapseThree" class="collapse" data-parent="#accordion">
+            <div class="card-bory">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas magni sapiente aut possimus iste, inventore illo quasi eaque, soluta tenetur repellendus enim. Rerum amet, velit aperiam ad excepturi animi tempora?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
