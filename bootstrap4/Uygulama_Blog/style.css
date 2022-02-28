@@ -1,0 +1,15 @@
+nav {
+    opacity: .8;
+    border-bottom: 1px solid #fff;
+}
+
+.jumbotron {
+    padding-top: 100px;
+}
+
+.jumbotron h5 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#categories ul a{ text-decoration: none;}
