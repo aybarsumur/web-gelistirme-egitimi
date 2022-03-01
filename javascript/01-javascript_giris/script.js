@@ -1,3 +1,4 @@
+alert("Merhaba");
 console.log('Merhaba')
 console.log(1234)
 console.log(true)
