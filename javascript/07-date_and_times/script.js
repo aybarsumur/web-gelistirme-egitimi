@@ -48,15 +48,17 @@ console.log("gün : " + gün);
 
 // Yaş hesaplama nasıl yapılır ?
 
-let birthday = new Date("8/1/1985");
+let birthday = new Date("4/20/1981");
 
 console.log(birthday.getTime()); // 1/1/1970-1/8/1985 arasında geçen süre (milisaniye olarak)
 console.log(Date.now()); //1/1/1970-bugün arasınde geçen süre ( milisaniye olarak)
 
-let ageDifMs = Date.now()-birthday.getTime();
+let ageDifMs = Date.now()-birthday.getTime(); //yaş - milisaniye olarak
 console.log(ageDifMs);
 
+// date objesine milisaniye veriyoruz tarih objesi alıyoruz
 let ageDate = new Date(ageDifMs).getFullYear()-1970; //1.methot
+console.log(new Date(ageDifMs))
 console.log(ageDate);
 
 let ageDate1 = ageDifMs/1000/60/60/24/365 //2.methot
@@ -65,11 +67,11 @@ console.log(ageDate1);
 
 // Her yıl mayıs ayının 2. haftası pazar günü kutlanan anneler günü 2019 yılında ne zaman kutlanacaktır.
 
-let annelerGunu = new Date("05/01/2019 0:0:0:0");
 // annelerGunu.setHours(0, 0, 0, 0); // saat bilgisiyle işimiz olmadığından milisaniyeye kadar sıfırladık
 // annelerGunu.setFullYear(2019); 
 // annelerGunu.setDate(1);
 // annelerGunu.setMonth(4); // mayıs ayı
+let annelerGunu = new Date("05/01/2019 0:0:0:0");
 
 console.log(annelerGunu.getDay()); //1/5/2019 hangi güne gelmiş? 3 - çarşamba
 
