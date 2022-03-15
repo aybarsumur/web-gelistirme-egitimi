@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <title>Jquery Message Box</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #message-box {
+      background-color: green;
+      text-align: center;
+      color: white;
+    }
+
+    #header {
+      height: 25px;
+      padding: 10px;
+      cursor: pointer;
+      border-bottom: 1px solid white;
+    }
+
+    #content {
+      height: 200px;
+      padding: 10px;
+      display: none;
+    }
+
+    #close {
+      float: right;
+    }
+
+    #close:hover {
+      color: #000;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div id="message-box">
+    <div id="header">
+      Mesajınız var
+      <span id="close">X</span>
+    </div>
+    <div id="content"></div>
+  </div>
+
+  <script>
+
+    $(document).ready(function(){
+      $("#header").click(function(){
+        $("#content").toggle("slow");
+      });
+
+      $("#close").click(function(){
+        $("#message-box").hide("slow");
+      });
+    });
+    
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <title>Jquery Animation</title>
+
+  <style>
+
+    #box {
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+    }
+    
+  </style>
+
+</head>
+
+<body>
+
+  <button id="animate">Animate</button>
+
+  <div id="box">Merhaba</div>
+
+  <script>
+    
+    var box = $("#box");
+
+    $(document).ready(function(){
+
+      $("#animate").click(function(){
+        box.animate(
+          {
+        left:"200px",
+        width:"300px",
+        opacity:0.5,
+        height:"350px"
+          },3000
+        );
+
+        box.animate(
+          {
+            fontSize:"35px"
+          },3000,function(){
+            alert("Animasyon Bitti")
+          }
+        );
+
+      });
+      
+    });
+    
+  </script>
+
+</body>
+
+</html>

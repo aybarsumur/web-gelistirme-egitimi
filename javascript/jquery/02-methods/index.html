@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <title>Jquery Methods</title>
+
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+
+    .green {
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Jquery Helper Methods</h1>
+
+  <ul>
+    <li>Jquery Selectors</li>
+    <li>Jquery Methods</li>
+    <li>Jquery Animations</li>
+  </ul>
+
+  <input id="input1" type="text" placeholder="FullName" value="Jquery Val Function">
+
+  <br><br>
+
+  <img src="img/panda.jpg" width="200px" alt="">
+
+  <br><br>
+
+  <input id="name" type="text" placeholder="name" >
+  <input id="surName" type="text" placeholder="surname" class="green">
+  <button id="btnSave" onclick="nameSurname()">Save</button>
+
+
+  <script>
+
+    ///****Helper Methods : https://api.jquery.com/
+    ///** .text() **
+
+    console.log($("h1").text()); //Jquery Helper Methods
+    console.log($("ul").text()); //Jquery Selectors
+                                 //Jquery Methods
+                                 //Jquery Animations
+
+    console.log($("ul li").text()); //query SelectorsJquery MethodsJquery Animations
+    
+    // set özelliği
+    $("h1").text("JavaScript");
+
+
+    ///** .val() **
+
+    console.log($("input").val()); //Jquery Val Function
+
+    // set özelliği
+    $("#input1").val("deneme");
+    
+
+    function nameSurname() {
+      let name = $("#name").val();
+      let surName = $("#surName").val();
+      console.log("Adınız ve Soyadınız :"+name+" "+surName);
+
+      ///** .addClass() **
+      $("#name").addClass("highlight");
+
+      ///** .removeClass() **
+      $("#surName").removeClass("green");
+
+      ///** .toggleClass() ** // eklenmiş ise çıkarır, yoksa ekler
+      $("#surName").toggleClass("highlight");
+    }
+
+
+    ///** .attr() **
+    $("img").attr("width","400px");
+  
+
+
+  </script>
+
+
+</body>
+
+</html>
